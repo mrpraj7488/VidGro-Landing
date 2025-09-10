@@ -20,13 +20,6 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
     styledComponents: true,
-    // Target modern browsers to reduce polyfills
-    targets: {
-      chrome: '91',
-      firefox: '90',
-      safari: '15',
-      edge: '91'
-    }
   },
   modularizeImports: {
     'lucide-react': {
