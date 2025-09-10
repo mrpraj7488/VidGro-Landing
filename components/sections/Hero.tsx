@@ -137,7 +137,7 @@ export default function Hero() {
             className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2 sm:px-0 leading-relaxed"
           >
             Join <span className="font-bold text-purple-600 dark:text-purple-400">48,522+</span> creators who stopped waiting for the algorithm.{' '}
-            <span className="font-semibold block sm:inline mt-2 sm:mt-0">1 coin = 1 guaranteed real view</span> from real humans.
+            <span className="font-semibold block sm:inline mt-2 sm:mt-0">Guaranteed real view</span> from real humans.
             <span className="block sm:inline mt-2 sm:mt-0">
               Watch videos, earn coins, promote your content.{' '}
             </span>
