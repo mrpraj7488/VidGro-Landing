@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
-import JsonLD from '@/components/seo/JsonLD'
+import GoogleAnalytics from '../components/GoogleAnalytics'
+import JsonLD from '../components/seo/JsonLD'
 
 const inter = Inter({ 
   subsets: ['latin'],
