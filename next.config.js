@@ -11,9 +11,16 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'gsap'],
+    gzipSize: false,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
+  },
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{member}}',
+    },
   },
   // Optimize production builds
   productionBrowserSourceMaps: false,
