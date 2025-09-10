@@ -21,9 +21,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'VidGro - Go Viral Without Spending a Dime! 💰 | 1 Coin = 1 Real View',
-  description: 'Join 50,000+ creators in the revolutionary platform where 1 coin = 1 guaranteed real view. Watch videos, earn coins, promote your content. Start with 200 FREE coins - no credit card required!',
-  keywords: 'youtube growth, video promotion, creator community, real views, youtube marketing, content discovery, creator economy, free youtube views, earn coins watching videos, youtube viral, creator platform',
+  title: 'VidGro - Stop Waiting for the Algorithm, Grow Instantly! | Free YouTube Growth',
+  description: 'Join 50,000+ creators who stopped waiting and started growing. Watch videos, earn coins, get real views. 1 coin = 1 guaranteed human view. Get 100 welcome coins instantly - completely free forever!',
+  keywords: 'youtube growth, free youtube views, real views, creator community, youtube marketing, content discovery, earn coins watching videos, youtube viral, creator platform, algorithm alternative',
   authors: [{ name: 'VidGro Team' }],
   creator: 'VidGro',
   publisher: 'VidGro',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   openGraph: {
-    title: 'VidGro - Go Viral Without Spending a Dime! 💰',
-    description: 'Revolutionary creator-to-creator platform. 1 coin = 1 real view. Start with 200 FREE coins!',
+    title: 'VidGro - Stop Waiting for the Algorithm, Grow Instantly!',
+    description: 'Revolutionary creator-to-creator platform. 1 coin = 1 real view. Get 100 welcome coins instantly - completely free forever!',
     images: ['/og-image-1200x630.png'],
     url: '/',
     siteName: 'VidGro',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VidGro - Go Viral Without Spending a Dime! 💰',
-    description: 'Revolutionary creator platform. 1 coin = 1 real view. 200 FREE coins to start!',
+    title: 'VidGro - Stop Waiting for the Algorithm, Grow Instantly!',
+    description: 'Revolutionary creator platform. 1 coin = 1 real view. 100 welcome coins instantly - free forever!',
   },
   alternates: {
     canonical: 'https://vidgro.app',

@@ -32,7 +32,6 @@ export default function GamifiedButton({
   const variants = {
     primary: 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg hover:shadow-primary-500/25',
     secondary: 'bg-white hover:bg-gray-50 text-primary-600 border-2 border-primary-500 shadow-lg',
-    vip: 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 text-white shadow-lg hover:shadow-yellow-500/25'
   }
 
   const sizes = {
@@ -94,7 +93,6 @@ export default function GamifiedButton({
 
         {/* Button content */}
         <div className="relative flex items-center justify-center gap-2">
-          {variant === 'vip' && <Sparkles className="w-4 h-4" />}
           {coinReward > 0 && <Coins className="w-3 h-3 sm:w-4 sm:h-4" />}
           {children}
         </div>
@@ -110,7 +108,7 @@ export default function GamifiedButton({
           }}
           style={{
             background: variant === 'primary' ? '#4F46E5' : 
-                       variant === 'vip' ? '#F59E0B' : '#EC4899'
+                       '#EC4899'
           }}
         />
       </motion.button>

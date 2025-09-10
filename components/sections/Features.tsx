@@ -22,57 +22,57 @@ export default function Features() {
     {
       icon: <Coins className="w-6 h-6" />,
       title: "1 Coin = 1 Real View",
-      description: "Simple, transparent pricing. Every coin guarantees one real human view from engaged VidGro creators.",
+      description: "Simple, transparent system. Every coin guarantees one real human view from engaged VidGro creators - no bots, no fake accounts.",
       color: "from-green-500 to-green-600",
       size: "large"
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Watch & Earn System",
-      description: "Earn 1 coin per video you watch (30+ seconds). Free users earn up to 50 coins daily, VIP unlimited.",
+      description: "Earn 1 coin per video you watch (30+ seconds). No daily limits - watch more, earn more, promote more.",
       color: "from-blue-500 to-blue-600",
       size: "medium"
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      title: "Massive Referral Rewards",
-      description: "Earn 400 coins for every friend who joins! Your friend gets 200 bonus coins too.",
+      title: "Referral Rewards",
+      description: "Invite friends and both earn bonus coins. Build your network while growing your coin balance for more promotions.",
       color: "from-purple-500 to-purple-600",
       size: "medium"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "24-48 Hour Results",
-      description: "See your view count grow within 24-48 hours of promoting your video.",
+      title: "Instant Results",
+      description: "See your view count grow within 24 hours of promoting your video. Stop waiting, start growing.",
       color: "from-yellow-500 to-yellow-600",
       size: "small"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "YouTube TOS Compliant",
-      description: "100% safe for your channel. Real views from real creators, no bots or fake accounts.",
+      description: "100% safe for your channel. Real engagement from real creators helps the algorithm discover your content.",
       color: "from-red-500 to-red-600",
       size: "small"
     },
     {
       icon: <Target className="w-6 h-6" />,
       title: "Free Coin Opportunities",
-      description: "Watch ads for 100 coins every 2 hours. Rate the app for 100 coins. Daily bonuses available.",
+      description: "Multiple ways to earn: daily bonuses, achievements, referrals, and optional ad viewing. Always free.",
       color: "from-indigo-500 to-indigo-600",
       size: "medium"
     },
     {
-      icon: <Award className="w-6 h-6" />,
-      title: "VIP Growth Acceleration",
-      description: "Unlimited daily earnings, 10-15% discounts, priority placement, and premium support.",
-      color: "from-orange-500 to-orange-600",
+      icon: <Sparkles className="w-6 h-6" />,
+      title: "Gamified Experience",
+      description: "Progress bars, achievements, streaks, and leaderboards make growing your channel fun and engaging.",
+      color: "from-pink-500 to-pink-600",
       size: "small"
     },
     {
-      icon: <Sparkles className="w-6 h-6" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics",
-      description: "Track real-time views, engagement metrics, completion rates, and ROI with detailed insights.",
-      color: "from-pink-500 to-pink-600",
+      description: "Track real-time views, engagement metrics, completion rates, and campaign performance with detailed insights.",
+      color: "from-orange-500 to-orange-600",
       size: "large"
     }
   ]
@@ -95,11 +95,11 @@ export default function Features() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-            Why 50,000+ Creators Choose VidGro
+            Stop Waiting for the Algorithm — Take Control
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-            The revolutionary platform where creators help creators grow. Real views, 
-            real engagement, real results - all starting completely FREE.
+            Join 50,000+ creators who stopped waiting and started growing. Real views from real creators, 
+            guaranteed results, unlimited earning potential - all completely FREE forever.
           </p>
         </motion.div>
 

@@ -1,97 +1,72 @@
-// VidGro app-specific content with real features and benefits
+// VidGro app-specific content with real features and benefits - FREE FOCUS
 export const heroHeadlines = [
-  "Go Viral Without Spending a Dime! 💰",
-  "Transform Your YouTube Channel from Zero to Hero",
-  "Get Real Views from Real Creators - 100% FREE",
-  "Earn Coins Watching Videos, Spend Them Getting Views",
-  "Join 50,000+ Creators Growing Together",
-  "1 Coin = 1 Guaranteed Real View",
+  "Stop Waiting for the Algorithm — Grow Instantly! 🚀",
+  "Turn Every Coin Into Guaranteed Real Views",
   "Watch Videos, Earn Coins, Promote Your Content",
-  "The Revolutionary Creator-to-Creator Growth Platform",
-  "Turn Your YouTube Dreams Into Reality",
-  "Real Human Views, Not Bots - Guaranteed",
-  "Start with 200 FREE Coins - No Credit Card Required",
-  "Where Creators Help Creators Go Viral",
-  "Boost Your Views in 24-48 Hours",
-  "The Ultimate YouTube Growth Hack That Actually Works",
-  "From 0 Views to Viral - The VidGro Way",
-  "Earn 400 Coins Per Friend You Refer",
-  "Watch 10 Videos Daily = 70 Coins Per Week",
-  "Get Your First 1000 Views Without Spending Money",
-  "The Creator Economy Revolution Starts Here",
-  "Real Engagement from Interested Viewers"
+  "Join 50,000+ Creators Growing Together for FREE",
+  "Real Views from Real Creators — Always Free",
+  "100 Welcome Coins = 100 Real Views to Start",
+  "The Creator-to-Creator Growth Revolution",
+  "Instant Results in 24 Hours — No Waiting",
+  "Unlimited Earning Power, Zero Cost",
+  "From 0 Views to Viral — The VidGro Way",
+  "Real Human Views, Not Bots — Guaranteed",
+  "Growth Starts the Moment You Join",
+  "Why Wait Months? Grow in Days",
+  "The Fastest Way to Get Real YouTube Views",
+  "Gamified Growth That Actually Works"
 ];
 
 export const microTestimonials = [
-  "Got 300 views in 24 hours with just 50 coins! This actually works 🔥",
-  "Earned 1,200 coins just by referring 3 friends. Best decision ever!",
+  "Got 300 views in 24 hours with my welcome coins! This actually works 🔥",
   "Finally found a platform where real creators watch real content",
   "Went from 12 views to 500+ views in my first week using VidGro",
   "The coin system is genius - watch videos, earn coins, promote yours",
-  "VIP membership paid for itself in saved coins within a week",
   "My gaming channel finally got the audience it deserves",
-  "200 welcome coins got me started, now I'm earning 50+ daily",
+  "100 welcome coins got me started, now I'm earning 50+ daily",
   "Real humans watching my content, not bots. You can tell the difference",
-  "The 10-minute hold system ensures quality - love this feature",
-  "Referred 5 friends, earned 2000 coins, promoted 4 videos. Amazing!",
   "My music videos are finally reaching people who appreciate them",
   "The analytics show real engagement - people actually watch full videos",
-  "Started free, went VIP after seeing results. Worth every penny",
   "My educational content found its perfect audience here",
   "The community aspect is incredible - creators supporting creators",
   "Earned enough coins watching videos to promote my entire channel",
   "YouTube algorithm finally noticed me after using VidGro",
-  "The referral program is insane - 400 coins per friend!",
   "From struggling creator to 10K views per video in 2 months",
-  "The fair play system keeps everything legitimate and safe",
   "My completion rates improved because viewers are genuinely interested",
   "VidGro helped me understand what content actually works",
-  "The mobile app makes it so easy to promote on the go",
   "Real-time tracking lets me see my growth happening live",
-  "The VIP discounts save me tons of coins on promotions",
   "My tech reviews are reaching actual buyers now",
-  "The anti-bot protection means every view is valuable",
   "Sustainable growth that doesn't hurt my channel's reputation",
   "The creator community here is incredibly supportive",
   "My funny videos finally found their audience",
-  "The smart queue system always shows me interesting content",
   "Earning while watching videos feels like getting paid to discover content",
-  "The 3-day money back guarantee made trying VIP risk-free",
   "My channel went from dead to thriving in just one month",
-  "The transparent pricing makes budgeting for growth so easy",
   "Real engagement metrics show people actually care about my content",
-  "The offline capability lets me queue promotions anywhere",
   "My subscriber count tripled after people discovered me on VidGro",
-  "The fraud detection keeps the platform clean and trustworthy",
-  "Best investment in my YouTube career - and it started free!",
+  "Best decision for my YouTube career - and it's completely free!",
   "The daily bonuses keep me coming back and earning more",
   "My art tutorials are reaching aspiring artists worldwide",
-  "The priority queue for VIP members is a game-changer",
   "Real creators giving real feedback helped improve my content",
   "The coin economy is fair - everyone can succeed here",
-  "My cooking videos found food lovers who actually try my recipes",
-  "The 24/7 support team actually responds and helps",
-  "Watching the view counter go up in real-time is addictive",
-  "The referral system created a network effect for my growth",
-  "My fitness content is motivating real people to get healthy"
+  "My cooking videos found food lovers who actually try my recipes"
 ];
 
 export const faqVariations = [
   {
     q: "How does the coin system actually work?",
-    a: "It's simple: watch videos to earn coins (1 coin per 30-second watch), then spend coins to promote your videos (1 coin = 1 guaranteed real view). Free users can earn up to 50 coins daily, VIP members have unlimited earning potential."
+    a: "Simple! Watch videos to earn coins (1 coin per 30-second watch), then spend coins to promote your videos (1 coin = 1 guaranteed real view). You start with 100 welcome coins and can earn unlimited coins daily by watching content."
   },
   {
     q: "Are these real people watching my videos or bots?",
-    a: "100% real humans! Every view comes from actual VidGro creators who earn coins by watching content. We have advanced anti-bot protection and fraud detection to ensure only genuine engagement."
+    a: "100% real humans! Every view comes from actual VidGro creators who earn coins by watching content. We have advanced anti-bot protection to ensure only genuine engagement."
   },
   {
-    q: "How much does it cost to get started?",
-    a: "VidGro is completely FREE to start! You get 200 welcome coins immediately upon signup - no credit card required. You can earn more coins by watching videos, referring friends, or watching ads."
+    q: "Is VidGro really completely free?",
+    a: "Yes! VidGro is 100% free forever. You get 100 welcome coins immediately upon signup and can earn unlimited coins by watching videos, referring friends, and completing daily activities. No hidden costs, no subscriptions."
   },
   {
-    q: "What's the referral program about?",
-    a: "You earn 400 coins for every friend who joins VidGro and watches their first video. Your friend also gets 200 bonus coins. There's no limit - refer unlimited friends and keep earning!"
+    q: "How much can I earn from referrals?",
+    a: "You earn coins for every friend who joins VidGro and starts watching videos. Your friend also gets bonus coins. There's no limit to how many friends you can refer - unlimited earning potential!"
   },
   {
     q: "Is this safe for my YouTube channel?",
@@ -99,71 +74,46 @@ export const faqVariations = [
   },
   {
     q: "How quickly will I see results?",
-    a: "Most creators see their view count increase within 24-48 hours of promoting a video. The 10-minute hold system ensures quality engagement before your promotion goes live."
+    a: "Most creators see their view count increase within 24 hours of promoting a video. Our system ensures quality engagement and real viewer retention."
   },
   {
-    q: "What are the VIP benefits worth it?",
-    a: "VIP members get unlimited daily earnings (no 50-coin limit), 10-15% promotion discounts, priority queue placement, ad-free experience, and premium support. Most VIP members save more in coin discounts than they spend on membership."
+    q: "Can I really earn unlimited coins?",
+    a: "Yes! Unlike other platforms, VidGro has no daily earning limits. Watch more videos, refer more friends, complete more activities - your earning potential is unlimited and always free."
   },
   {
-    q: "Can I really earn coins just by watching videos?",
-    a: "Yes! You earn 1 coin for every video you watch for at least 30 seconds. Free users can earn up to 50 coins daily this way. You can also earn 100 coins every 2 hours by watching 30-second ads."
-  },
-  {
-    q: "What happens if I'm not satisfied?",
-    a: "We offer a 3-day money-back guarantee for VIP memberships. For coin purchases, we provide 100% refund within 10 minutes, and 50% refund after that. We also have 24/7 support to resolve any issues."
+    q: "What happens if I run out of coins?",
+    a: "You can always earn more! Watch videos, refer friends, complete daily bonuses, or watch short ads for bonus coins. There are multiple ways to keep earning without spending money."
   },
   {
     q: "How do I know my videos will get quality views?",
-    a: "Our smart matching system shows your videos to creators interested in your content type. The 10-minute hold period ensures viewers are genuinely engaged. Plus, you can track completion rates and engagement metrics in real-time."
+    a: "Our smart matching system shows your videos to creators interested in your content type. Plus, you can track completion rates and engagement metrics in real-time to see the quality of views."
+  },
+  {
+    q: "Can I promote multiple videos at once?",
+    a: "Absolutely! You can run multiple campaigns simultaneously. Promote your entire channel, specific playlists, or individual videos - whatever helps your growth strategy."
   }
 ];
 
-export const testimonialPatterns = [
-  "This coin system is genius - finally a fair way to grow",
-  "200 welcome coins got me started, now I'm hooked",
-  "Real creators watching real content - you can feel the difference",
-  "The referral program is insane - 400 coins per friend!",
-  "VIP membership paid for itself in the first week",
-  "My gaming channel finally found its audience here",
-  "Earning coins while discovering amazing content",
-  "The 24-48 hour results are no joke - it actually works",
-  "From 0 views to viral in just one month",
-  "The anti-bot protection keeps everything legitimate"
-];
-
 export const urgencyElements = {
-  limitedSpots: {
-    text: "Only {spots} VIP spots left at launch price",
-    updateInterval: 300000, // Update every 5 min
-    range: [23, 47]
-  },
-  
   recentActivity: {
     messages: [
-      "{name} from {city} just earned 400 coins from referrals",
-      "{name} promoted their gaming video to 500 viewers",
+      "{name} from {city} just earned 200 coins watching tech videos",
+      "{name} promoted their gaming video and got 500 views",
       "{name} went from 12 to 2,000 views using VidGro",
-      "{name} just earned 50 coins watching tech videos",
+      "{name} just earned 100 coins from referrals",
       "{name} got 300 views in 24 hours with VidGro",
-      "{name} joined VIP and saved 200 coins already",
       "{name} discovered 10 new creators today",
-      "{name} hit 1K views on their first promoted video"
+      "{name} hit 1K views on their first promoted video",
+      "{name} earned 150 coins in one session"
     ],
     displayInterval: 6000,
     cities: ["New York", "Los Angeles", "London", "Toronto", "Mumbai", "Sydney", "Berlin", "Tokyo", "São Paulo", "Mexico City"]
-  },
-  
-  countdown: {
-    text: "Launch pricing ends in",
-    endTime: "23:59:59",
-    resetDaily: true
   }
 };
 
 export const ctaVariations = {
   primary: [
-    "Get 200 FREE Coins Now",
+    "Get 100 FREE Coins Now",
     "Start Growing FREE Today",
     "Join 50,000+ Creators",
     "Download VidGro FREE",
@@ -177,7 +127,7 @@ export const ctaVariations = {
     "Watch Success Stories",
     "Learn About Coins",
     "View Creator Results",
-    "Explore VIP Benefits"
+    "Explore Features"
   ]
 };
 
@@ -188,102 +138,55 @@ export const socialProofStats = {
   successRate: { min: 94, max: 96, suffix: "%" }
 };
 
-// VidGro-specific features and benefits
+// VidGro-specific features and benefits - FREE FOCUS
 export const appFeatures = [
   {
     title: "Watch & Earn System",
-    description: "Earn 1 coin per video you watch (minimum 30 seconds). Free users can earn up to 50 coins daily, VIP members have unlimited earning potential.",
-    benefits: ["1 coin per 30-second watch", "Up to 50 coins daily (free)", "Unlimited for VIP members", "Smart content matching"]
+    description: "Earn 1 coin per video you watch (minimum 30 seconds). No daily limits - watch more, earn more, promote more.",
+    benefits: ["1 coin per 30-second watch", "Unlimited daily earning", "Smart content matching", "Real-time coin tracking"]
   },
   {
     title: "1 Coin = 1 Real View",
-    description: "Simple, transparent pricing. Every coin you spend guarantees one real human view from engaged VidGro creators.",
-    benefits: ["Transparent pricing", "Real human views only", "No bots or fake accounts", "Quality assurance system"]
+    description: "Simple, transparent system. Every coin you spend guarantees one real human view from engaged VidGro creators.",
+    benefits: ["Transparent 1:1 ratio", "Real human views only", "No bots or fake accounts", "Quality assurance system"]
   },
   {
-    title: "Massive Referral Rewards",
-    description: "Earn 400 coins for every friend who joins and watches their first video. Your friend gets 200 bonus coins too!",
-    benefits: ["400 coins per referral", "200 bonus for friends", "Unlimited referrals", "95% success rate"]
-  },
-  {
-    title: "VIP Growth Acceleration",
-    description: "Unlimited daily earnings, 10-15% promotion discounts, priority queue placement, and ad-free experience.",
-    benefits: ["Unlimited coin earning", "10-15% discounts", "Priority placement", "Premium support"]
+    title: "Referral Rewards",
+    description: "Invite friends and both earn bonus coins. Build your network while growing your coin balance for more promotions.",
+    benefits: ["Bonus coins per referral", "Friend gets coins too", "Unlimited referrals", "Network effect growth"]
   },
   {
     title: "Free Coin Opportunities",
-    description: "Watch 30-second ads for 100 coins every 2 hours. Rate the app for 100 coins. Daily bonuses for active users.",
-    benefits: ["100 coins per ad", "App rating rewards", "Daily bonuses", "Multiple earning methods"]
+    description: "Multiple ways to earn: watch videos, refer friends, daily bonuses, achievement rewards, and optional ad viewing.",
+    benefits: ["Daily bonus coins", "Achievement rewards", "Optional ad viewing", "Multiple earning methods"]
   },
   {
     title: "Advanced Analytics",
-    description: "Track real-time views, engagement metrics, completion rates, and ROI. See exactly how your content performs.",
-    benefits: ["Real-time tracking", "Engagement metrics", "Completion rates", "ROI calculator"]
+    description: "Track real-time views, engagement metrics, completion rates, and campaign performance with detailed insights.",
+    benefits: ["Real-time tracking", "Engagement metrics", "Completion rates", "Campaign analytics"]
+  },
+  {
+    title: "Gamified Experience",
+    description: "Progress bars, achievements, streaks, and leaderboards make growing your channel fun and engaging.",
+    benefits: ["Progress tracking", "Achievement system", "Daily streaks", "Creator leaderboards"]
   }
 ];
 
-export const pricingPlans = [
+// Success path for creators
+export const successPath = [
   {
-    name: "Free Creator",
-    price: "₹0",
-    period: "Forever",
-    description: "Perfect for getting started with real YouTube growth",
-    features: [
-      "200 welcome coins instantly",
-      "Earn up to 50 coins daily",
-      "1 coin = 1 real view",
-      "Watch videos to earn coins",
-      "Referral program (400 coins per friend)",
-      "Free coin ads (100 coins every 2 hours)",
-      "Basic analytics dashboard",
-      "Community support",
-      "Mobile app access"
-    ],
-    popular: false,
-    coinReward: 200
+    phase: "Kickstart (Day 1)",
+    description: "Sign up and get 100 welcome coins instantly. Run your first campaign and see views within 24 hours.",
+    actions: ["Get 100 welcome coins", "Promote first video", "See results in 24h"]
   },
   {
-    name: "VIP Creator",
-    price: "₹299",
-    originalPrice: "₹399",
-    period: "per month",
-    description: "Supercharge your growth with unlimited earning potential",
-    features: [
-      "Everything in Free plan",
-      "Unlimited daily coin earning",
-      "10-15% promotion discounts",
-      "Priority queue placement",
-      "Ad-free experience",
-      "Advanced analytics & insights",
-      "Premium support (2-hour response)",
-      "Early access to new features",
-      "VIP community access",
-      "Custom promotion targeting"
-    ],
-    popular: true,
-    coinReward: 1000,
-    savings: "Save ₹100 + earn more coins"
+    phase: "Accelerate (Week 1-2)", 
+    description: "Watch videos daily to earn steady coins. Refer friends for bonus coins. Run multiple campaigns.",
+    actions: ["Watch videos daily", "Refer 3+ friends", "Multiple campaigns"]
   },
   {
-    name: "Pro Creator",
-    price: "₹799",
-    originalPrice: "₹999",
-    period: "per month",
-    description: "For serious creators and agencies managing multiple channels",
-    features: [
-      "Everything in VIP plan",
-      "Multiple channel management",
-      "Bulk promotion tools",
-      "White-label analytics",
-      "API access for automation",
-      "Dedicated account manager",
-      "Custom integrations",
-      "Advanced targeting options",
-      "Priority feature requests",
-      "Enterprise-level support"
-    ],
-    popular: false,
-    coinReward: 2500,
-    savings: "Save ₹200 + premium tools"
+    phase: "Viral Takeoff (Month 1+)",
+    description: "Consistent promotion drives consistent traffic. Higher engagement boosts organic recommendations.",
+    actions: ["Consistent promotion", "Organic growth boost", "Subscriber increase"]
   }
 ];

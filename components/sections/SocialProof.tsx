@@ -122,7 +122,7 @@ export default function SocialProof() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="ml-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base">4.8/5 from 12,543 reviews</span>
+              <span className="ml-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base">4.8/5 from 15,000+ creators</span>
             </div>
           </div>
 
@@ -165,10 +165,10 @@ export default function SocialProof() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg text-sm sm:text-base">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg text-sm sm:text-base">
             <TrendingUp className="w-4 h-4" />
             <span className="font-semibold">
-              Only {limitedSpots} VIP spots left at launch price
+              {limitedSpots}K+ creators growing right now
             </span>
           </div>
         </motion.div>

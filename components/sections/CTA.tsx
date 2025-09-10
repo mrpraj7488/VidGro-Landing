@@ -72,12 +72,12 @@ export default function CTA() {
             </div>
 
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ready to Go Viral?
+              Stop Waiting. Start Growing.
             </h2>
             
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Join 50,000+ creators who are already using VidGro to transform their YouTube channels. 
-              <span className="font-semibold"> Start with 200 FREE coins - no credit card required!</span>
+              Every day you wait is growth you lose. Join 50,000+ creators who took control of their YouTube success. 
+              <span className="font-semibold"> Get 100 welcome coins instantly - completely free forever!</span>
             </p>
           </motion.div>
 
@@ -113,69 +113,28 @@ export default function CTA() {
             <GamifiedButton
               variant="secondary"
               size="lg"
-              coinReward={200}
+              coinReward={100}
               className="min-w-[280px] bg-white text-primary-600 hover:bg-gray-50"
             >
-              Get 200 FREE Coins Now
+              Get 100 FREE Coins Now
               <ArrowRight className="w-5 h-5 ml-2" />
             </GamifiedButton>
-            
-            <GamifiedButton
-              variant="vip"
-              size="lg"
-              coinReward={1000}
-              className="min-w-[200px]"
-            >
-              Go VIP - Save ₹100
-            </GamifiedButton>
-          </motion.div>
-
-          {/* Urgency timer */}
-          <motion.div
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <div className="text-white/80 text-sm font-medium mb-3">
-              🔥 Launch Pricing Ends In:
-            </div>
-            <div className="flex justify-center gap-4">
-              {[
-                { label: 'Hours', value: timeLeft.hours },
-                { label: 'Minutes', value: timeLeft.minutes },
-                { label: 'Seconds', value: timeLeft.seconds }
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[60px]">
-                    <div className="text-2xl font-bold text-white">
-                      {item.value.toString().padStart(2, '0')}
-                    </div>
-                  </div>
-                  <div className="text-white/60 text-xs mt-1">
-                    {item.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           {/* Trust indicators */}
           <motion.div
-            className="mt-12 text-center"
+            className="mt-8 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <div className="text-white/60 text-sm mb-4">
-              Join the VidGro creator revolution
+              Join the creator revolution - completely free forever
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {/* Placeholder for trust badges/logos */}
-              <div className="text-white text-sm">✓ 200 FREE Coins</div>
-              <div className="text-white text-sm">✓ 3-Day Guarantee</div>
+              <div className="text-white text-sm">✓ 100 Welcome Coins</div>
+              <div className="text-white text-sm">✓ Always Free</div>
               <div className="text-white text-sm">✓ No Credit Card Required</div>
               <div className="text-white text-sm">✓ Real Human Views</div>
             </div>

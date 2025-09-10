@@ -138,8 +138,8 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           Join <span className="font-semibold text-indigo-600">{stats.creatorsJoined.toLocaleString()}+</span> creators 
-          in the revolutionary platform where <span className="font-semibold">1 coin = 1 guaranteed real view</span>. 
-          Watch videos, earn coins, promote your content. <span className="font-semibold">Start with 200 FREE coins!</span>
+          who stopped waiting for the algorithm. <span className="font-semibold">1 coin = 1 guaranteed real view</span> from real humans. 
+          Watch videos, earn coins, promote your content. <span className="font-semibold">Get 100 welcome coins instantly!</span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -152,11 +152,11 @@ export default function Hero() {
           <GamifiedButton
             variant="primary"
             size="lg"
-            coinReward={200}
+            coinReward={100}
             className="w-full sm:min-w-[280px] sm:w-auto"
           >
             <Sparkles className="w-5 h-5 mr-2" />
-            Get 200 FREE Coins Now
+            Get 100 FREE Coins Now
           </GamifiedButton>
           
           <GamifiedButton
@@ -199,7 +199,7 @@ export default function Hero() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <div className="text-center">
               <motion.div
-                className="text-2xl sm:text-3xl font-bold text-green-600 mb-1"
+                className="text-2xl sm:text-3xl font-bold text-indigo-600 mb-1"
                 key={stats.activeUsers}
                 initial={{ scale: 1 }}
                 animate={{ scale: [1, 1.1, 1] }}
@@ -207,13 +207,13 @@ export default function Hero() {
               >
                 {stats.activeUsers.toLocaleString()}
               </motion.div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Active Creators</div>
-              <div className="w-2 h-2 bg-green-500 rounded-full mx-auto mt-2 animate-pulse" />
+              <div className="text-sm text-gray-600 dark:text-gray-400">Active Now</div>
+              <div className="w-2 h-2 bg-indigo-500 rounded-full mx-auto mt-2 animate-pulse" />
             </div>
             
             <div className="text-center">
               <motion.div
-                className="text-2xl sm:text-3xl font-bold text-yellow-600 mb-1"
+                className="text-2xl sm:text-3xl font-bold text-green-600 mb-1"
                 key={stats.viewsDelivered}
                 initial={{ scale: 1 }}
                 animate={{ scale: [1, 1.1, 1] }}
@@ -221,7 +221,7 @@ export default function Hero() {
               >
                 {(stats.viewsDelivered / 1000000).toFixed(1)}M+
               </motion.div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Coins Earned</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Views Delivered</div>
             </div>
             
             <div className="text-center">
@@ -234,7 +234,7 @@ export default function Hero() {
               >
                 {(stats.creatorsJoined / 1000).toFixed(0)}K+
               </motion.div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Videos Promoted</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Creators Joined</div>
             </div>
           </div>
         </motion.div>
