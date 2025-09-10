@@ -146,14 +146,14 @@ export default function Hero() {
             </span>
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button - Google Play Store Only */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-2 sm:px-0"
+            className="flex justify-center mb-6 sm:mb-8 px-2 sm:px-0"
           >
-            {/* Google Play Store Button */}
+            {/* Google Play Store Button with Shine Effect */}
             <a
               href="https://play.google.com/store/apps/details?id=com.vidgro.app"
               target="_blank"
@@ -161,27 +161,36 @@ export default function Hero() {
               className="w-full sm:w-auto max-w-xs"
             >
               <motion.div
-                className="bg-black hover:bg-gray-800 text-white rounded-xl px-5 py-3.5 sm:px-6 sm:py-4 flex items-center justify-center gap-3 transition-all duration-300 shadow-lg hover:shadow-xl w-full min-h-[56px] sm:min-h-[60px]"
+                className="relative bg-black hover:bg-gray-800 text-white rounded-xl px-5 py-3.5 sm:px-6 sm:py-4 flex items-center justify-center gap-3 transition-all duration-300 shadow-lg hover:shadow-xl w-full min-h-[56px] sm:min-h-[60px] overflow-hidden group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                {/* Shine effect overlay */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0 relative z-10" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                 </svg>
-                <div className="text-left">
+                <div className="text-left relative z-10">
                   <div className="text-xs text-gray-300">GET IT ON</div>
                   <div className="text-base sm:text-lg font-semibold -mt-0.5">Google Play</div>
                 </div>
+                
+                {/* Pulse animation for attention */}
+                <motion.div
+                  className="absolute inset-0 rounded-xl border-2 border-white/30"
+                  animate={{
+                    scale: [1, 1.05, 1],
+                    opacity: [0.5, 0, 0.5]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
               </motion.div>
             </a>
-            
-            <GamifiedButton
-              variant="secondary"
-              size="lg"
-              className="w-full sm:w-auto max-w-xs min-h-[56px] sm:min-h-[60px] text-base sm:text-lg px-6 sm:px-8"
-            >
-              See How It Works
-            </GamifiedButton>
           </motion.div>
 
           {/* Trust indicators */}

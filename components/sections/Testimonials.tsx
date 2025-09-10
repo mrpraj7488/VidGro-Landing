@@ -66,32 +66,37 @@ export default function Testimonials() {
     }
   ]
 
-  // Auto-advance testimonials
+  // Auto-advance testimonials - always on
   useEffect(() => {
-    if (!isAutoPlaying) return
-
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 2) % testimonials.length)
+      setCurrentIndex((prev) => {
+        // On mobile, advance by 1; on larger screens, advance by 2
+        const increment = window.innerWidth < 640 ? 1 : 2
+        return (prev + increment) % testimonials.length
+      })
     }, 6000)
 
     return () => clearInterval(interval)
-  }, [isAutoPlaying, testimonials.length])
+  }, [testimonials.length])
 
   const nextTestimonials = () => {
-    setCurrentIndex((prev) => (prev + 2) % testimonials.length)
-    setIsAutoPlaying(false)
+    const increment = window.innerWidth < 640 ? 1 : 2
+    setCurrentIndex((prev) => (prev + increment) % testimonials.length)
   }
 
   const prevTestimonials = () => {
-    setCurrentIndex((prev) => (prev - 2 + testimonials.length) % testimonials.length)
-    setIsAutoPlaying(false)
+    const increment = window.innerWidth < 640 ? 1 : 2
+    setCurrentIndex((prev) => (prev - increment + testimonials.length) % testimonials.length)
   }
 
-  // Get current pair of testimonials
+  // Get current testimonials - single on mobile, pair on larger screens
   const getCurrentTestimonials = () => {
     const first = testimonials[currentIndex]
+    if (typeof window !== 'undefined' && window.innerWidth < 640) {
+      return [first] // Single card on mobile
+    }
     const second = testimonials[(currentIndex + 1) % testimonials.length]
-    return [first, second]
+    return [first, second] // Two cards on larger screens
   }
 
   return (
@@ -118,7 +123,7 @@ export default function Testimonials() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
@@ -215,15 +220,18 @@ export default function Testimonials() {
             </button>
           </div>
 
-          {/* Testimonial indicators */}
+          {/* Testimonial indicators - adjust for mobile vs desktop */}
           <div className="flex justify-center gap-2 mt-6 sm:mt-8">
-            {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => (
+            {Array.from({ length: typeof window !== 'undefined' && window.innerWidth < 640 ? testimonials.length : Math.ceil(testimonials.length / 2) }).map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentIndex(index * 2)}
-                aria-label={`Go to testimonial group ${index + 1}`}
+                onClick={() => {
+                  const multiplier = typeof window !== 'undefined' && window.innerWidth < 640 ? 1 : 2
+                  setCurrentIndex(index * multiplier)
+                }}
+                aria-label={`Go to testimonial ${index + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  Math.floor(currentIndex / 2) === index
+                  (typeof window !== 'undefined' && window.innerWidth < 640 ? currentIndex : Math.floor(currentIndex / 2)) === index
                     ? 'bg-indigo-500 w-8'
                     : 'bg-gray-300 dark:bg-gray-600 w-2'
                 }`}
@@ -231,19 +239,6 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Auto-play control */}
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              aria-label={isAutoPlaying ? 'Pause auto-play' : 'Start auto-play'}
-              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
-            >
-              <Play className={`w-4 h-4 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
-              <span className="text-xs sm:text-sm">
-                {isAutoPlaying ? 'Auto-playing' : 'Paused'}
-              </span>
-            </button>
-          </div>
         </div>
       </div>
     </section>
