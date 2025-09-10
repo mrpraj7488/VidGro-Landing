@@ -14,6 +14,14 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'gsap'],
     gzipSize: false,
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -88,6 +96,18 @@ const nextConfig = {
         ...config.resolve.alias,
         'core-js': false,
         'regenerator-runtime': false,
+      };
+
+      // Further optimize for modern browsers
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        'core-js/modules/es.array.at': false,
+        'core-js/modules/es.array.flat': false,
+        'core-js/modules/es.array.flat-map': false,
+        'core-js/modules/es.object.from-entries': false,
+        'core-js/modules/es.object.has-own': false,
+        'core-js/modules/es.string.trim-end': false,
+        'core-js/modules/es.string.trim-start': false,
       };
     }
     
