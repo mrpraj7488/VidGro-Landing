@@ -84,40 +84,35 @@ export default function Features() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-slate-800">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Everything You Need to Grow
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Powerful features designed to help creators discover each other and build 
             genuine communities around quality content.
           </p>
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="max-w-7xl mx-auto mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 auto-rows-fr">
+        <div className="max-w-7xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => {
-              const gridClasses = {
-                large: "md:col-span-2 md:row-span-2",
-                medium: "md:col-span-2",
-                small: "md:col-span-1"
-              }
 
               return (
                 <motion.div
                   key={index}
                   className={`
-                    ${gridClasses[feature.size as keyof typeof gridClasses]}
-                    bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 
+                    ${feature.size === 'large' ? 'sm:col-span-2 lg:col-span-2' : ''}
+                    bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700 
                     hover:shadow-xl transition-all duration-300 group relative overflow-hidden
                   `}
                   initial={{ opacity: 0, y: 20 }}
@@ -131,7 +126,7 @@ export default function Features() {
                   
                   {/* Icon */}
                   <motion.div
-                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-4 shadow-lg`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-3 sm:mb-4 shadow-lg`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
@@ -139,15 +134,15 @@ export default function Features() {
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                     {feature.description}
                   </p>
 
                   {/* Hover effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl sm:rounded-2xl" />
                 </motion.div>
               )
             })}
@@ -156,22 +151,22 @@ export default function Features() {
 
         {/* Performance Stats */}
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-200 dark:border-gray-700"
+          className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl border border-gray-200 dark:border-gray-700"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Platform Performance
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
               See why creators choose VidGro for sustainable growth
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -182,14 +177,14 @@ export default function Features() {
                 transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
               >
                 <div className="flex justify-center mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
+                <div className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                   {stat.label}
                 </div>
               </motion.div>

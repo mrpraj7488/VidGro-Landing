@@ -56,11 +56,11 @@ export default function SocialProof() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
+    <section className="py-12 sm:py-16 bg-white dark:bg-gray-800 border-y border-gray-100 dark:border-gray-700">
       <div className="container mx-auto px-4">
         {/* Trust badges */}
         <motion.div
-          className="flex flex-wrap justify-center items-center gap-8 mb-12"
+          className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function SocialProof() {
           {trustBadges.map((badge, index) => (
             <motion.div
               key={index}
-              className="flex items-center gap-2 text-gray-600 dark:text-gray-400"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -83,7 +83,7 @@ export default function SocialProof() {
 
         {/* Live activity ticker */}
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg border border-gray-200 dark:border-gray-700 mb-8 max-w-2xl mx-auto"
+          className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-lg p-3 sm:p-4 shadow-lg border border-blue-100 dark:border-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -94,7 +94,7 @@ export default function SocialProof() {
             <AnimatePresence mode="wait">
               <motion.span
                 key={recentActivity}
-                className="text-gray-700 dark:text-gray-300 text-sm"
+                className="text-gray-700 dark:text-gray-300 text-xs sm:text-sm"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
@@ -108,25 +108,25 @@ export default function SocialProof() {
 
         {/* Testimonial carousel */}
         <motion.div
-          className="max-w-4xl mx-auto mb-12"
+          className="max-w-4xl mx-auto mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               What Creators Are Saying
             </h2>
             <div className="flex justify-center items-center gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="ml-2 text-gray-600 dark:text-gray-400">4.8/5 from 12,543 reviews</span>
+              <span className="ml-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base">4.8/5 from 12,543 reviews</span>
             </div>
           </div>
 
-          <div className="relative h-32 overflow-hidden">
+          <div className="relative h-24 sm:h-32 overflow-hidden px-4">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentTestimonial}
@@ -136,7 +136,7 @@ export default function SocialProof() {
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
               >
-                <blockquote className="text-xl md:text-2xl text-center text-gray-700 dark:text-gray-300 max-w-3xl px-4">
+                <blockquote className="text-base sm:text-lg md:text-xl text-center text-gray-700 dark:text-gray-300 max-w-3xl">
                   "{microTestimonials[currentTestimonial]}"
                 </blockquote>
               </motion.div>
@@ -144,7 +144,7 @@ export default function SocialProof() {
           </div>
 
           {/* Testimonial indicators */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4 sm:mt-6">
             {microTestimonials.slice(0, 5).map((_, index) => (
               <button
                 key={index}
@@ -165,7 +165,7 @@ export default function SocialProof() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg text-sm sm:text-base">
             <TrendingUp className="w-4 h-4" />
             <span className="font-semibold">
               Only {limitedSpots} free accounts left today

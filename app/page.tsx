@@ -7,12 +7,10 @@ import Pricing from '@/components/sections/Pricing'
 import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import ThemeToggle from '@/components/ui/ThemeToggle'
-import ProgressBar from '@/components/ui/ProgressBar'
 export default function HomePage() {
   return (
     <>
       <ThemeToggle />
-      <ProgressBar />
       
       <main className="min-h-screen">
         <Hero />

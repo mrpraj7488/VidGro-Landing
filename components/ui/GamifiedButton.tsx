@@ -36,9 +36,9 @@ export default function GamifiedButton({
   }
 
   const sizes = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    sm: 'px-3 py-2 text-sm min-h-[36px]',
+    md: 'px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base min-h-[40px] sm:min-h-[44px]',
+    lg: 'px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg min-h-[44px] sm:min-h-[48px]'
   }
 
   const handleClick = () => {
@@ -61,7 +61,7 @@ export default function GamifiedButton({
     <>
       <motion.button
         className={`
-          relative overflow-hidden rounded-lg font-semibold transition-all duration-300
+          relative overflow-hidden rounded-lg font-semibold transition-all duration-300 w-full sm:w-auto
           ${variants[variant]}
           ${sizes[size]}
           ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -95,7 +95,7 @@ export default function GamifiedButton({
         {/* Button content */}
         <div className="relative flex items-center justify-center gap-2">
           {variant === 'vip' && <Sparkles className="w-4 h-4" />}
-          {coinReward > 0 && <Coins className="w-4 h-4" />}
+          {coinReward > 0 && <Coins className="w-3 h-3 sm:w-4 sm:h-4" />}
           {children}
         </div>
 

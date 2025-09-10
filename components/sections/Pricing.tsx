@@ -88,34 +88,34 @@ export default function Pricing() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-900 dark:to-gray-800">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Choose Your Growth Plan
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Start free and upgrade when you're ready to accelerate your growth. 
             All plans include access to our amazing creator community.
           </p>
         </motion.div>
 
         {/* Pricing cards */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
               className={`
                 relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border-2 transition-all duration-300
                 ${plan.popular 
-                  ? 'border-primary-500 scale-105 shadow-2xl shadow-primary-500/20' 
-                  : 'border-gray-200 dark:border-gray-700 hover:border-primary-300 hover:shadow-2xl'
+                  ? 'border-indigo-500 lg:scale-105 shadow-2xl shadow-indigo-500/20' 
+                  : 'border-gray-200 dark:border-gray-700 hover:border-indigo-300 hover:shadow-2xl'
                 }
               `}
               initial={{ opacity: 0, y: 40 }}
@@ -127,7 +127,7 @@ export default function Pricing() {
               {/* Popular badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                  <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2">
                     <Crown className="w-4 h-4" />
                     Most Popular
                   </div>
@@ -135,37 +135,37 @@ export default function Pricing() {
               )}
 
               {/* Plan header */}
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <div className="text-center mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {plan.name}
                 </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900 dark:text-white">
+                  <span className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
                     {plan.price}
                   </span>
                   {plan.period !== "Forever" && (
-                    <span className="text-gray-600 dark:text-gray-400 ml-2">
+                    <span className="text-gray-600 dark:text-gray-400 ml-2 text-sm sm:text-base">
                       {plan.period}
                     </span>
                   )}
                 </div>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   {plan.description}
                 </p>
                 {plan.savings && (
-                  <div className="mt-2 text-green-600 dark:text-green-400 font-semibold text-sm">
+                  <div className="mt-2 text-green-600 dark:text-green-400 font-semibold text-xs sm:text-sm">
                     {plan.savings}
                   </div>
                 )}
               </div>
 
               {/* Features */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <ul className="space-y-3">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
                         {feature}
                       </span>
                     </li>
@@ -182,7 +182,7 @@ export default function Pricing() {
               >
                 {plan.buttonText}
                 {plan.coinReward > 0 && (
-                  <span className="ml-2">
+                  <span className="ml-2 text-sm">
                     (+{plan.coinReward} coins)
                   </span>
                 )}
@@ -191,7 +191,7 @@ export default function Pricing() {
               {/* Special offer for VIP */}
               {plan.popular && (
                 <div className="mt-4 text-center">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
                     <Gift className="w-4 h-4" />
                     First month 50% off!
                   </div>
@@ -203,13 +203,13 @@ export default function Pricing() {
 
         {/* Money back guarantee */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="inline-flex items-center gap-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-6 py-3 rounded-full border border-green-200 dark:border-green-800">
+          <div className="inline-flex items-center gap-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-green-200 dark:border-green-800 text-sm sm:text-base">
             <Star className="w-5 h-5" />
             <span className="font-semibold">30-day money-back guarantee</span>
           </div>
@@ -223,19 +223,19 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 dark:text-white mb-6 sm:mb-8">
             Frequently Asked Questions
           </h3>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+                className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700"
               >
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                <h4 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   {faq.q}
                 </h4>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   {faq.a}
                 </p>
               </div>

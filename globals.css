@@ -1,0 +1,62 @@
+@@ .. @@
+   /* Touch-optimized tap targets */
+   .cta-button {
+-    min-height: 44px;
+-    min-width: 44px;
+-    padding: 16px 32px;
++    min-height: 44px; /* Apple HIG */
++    min-width: 44px;
++    padding: 12px 24px;
++  }
++  
++  @media (min-width: 640px) {
++    .cta-button {
++      padding: 16px 32px;
++    }
+   }
+ }
+
+@@ .. @@
+ @keyframes float {
+   0%, 100% { transform: translateY(0px) }
+   50% { transform: translateY(-20px) }
+ }
++
++/* Mobile-specific optimizations */
++@media (max-width: 640px) {
++  .hero-title {
++    font-size: clamp(1.75rem, 8vw, 2.5rem);
++    line-height: 1.2;
++  }
++  
++  .container {
++    padding-left: 1rem;
++    padding-right: 1rem;
++  }
++  
++  /* Improve touch targets on mobile */
++  button, .btn, [role="button"] {
++    min-height: 44px;
++    min-width: 44px;
++  }
++  
++  /* Better spacing on mobile */
++  .section-padding {
++    padding-top: 3rem;
++    padding-bottom: 3rem;
++  }
++}
++
++/* Tablet optimizations */
++@media (min-width: 641px) and (max-width: 1024px) {
++  .hero-title {
++    font-size: clamp(2.5rem, 6vw, 4rem);
++  }
++}
++
++/* Desktop optimizations */
++@media (min-width: 1025px) {
++  .hero-title {
++    font-size: clamp(3rem, 5vw, 5rem);
++  }
++}
