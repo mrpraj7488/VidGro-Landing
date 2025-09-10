@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { Check, Crown, Zap, Star, Gift } from 'lucide-react'
 import GamifiedButton from '@/components/ui/GamifiedButton'
-import { pricingPlans } from '@/lib/seo-content'
 
 export default function Pricing() {
   const faqs = [
@@ -40,105 +39,6 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        {/* Pricing cards */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
-          {pricingPlans.map((plan, index) => (
-            <motion.div
-              key={index}
-              className={`
-                relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border-2 transition-all duration-300
-                ${plan.popular 
-                  ? 'border-indigo-500 lg:scale-105 shadow-2xl shadow-indigo-500/20' 
-                  : 'border-gray-200 dark:border-gray-700 hover:border-indigo-300 hover:shadow-2xl'
-                }
-              `}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-            >
-              {/* Popular badge */}
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2">
-                    <Crown className="w-4 h-4" />
-                    Most Popular
-                  </div>
-                </div>
-              )}
-
-              {/* Plan header */}
-              <div className="text-center mb-6 sm:mb-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  {plan.name}
-                </h3>
-                <div className="mb-4">
-                  <span className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-                    {plan.price}
-                  </span>
-                  {plan.originalPrice && (
-                    <span className="text-lg text-gray-500 line-through ml-2">
-                      {plan.originalPrice}
-                    </span>
-                  )}
-                  {plan.period !== "Forever" && (
-                    <span className="text-gray-600 dark:text-gray-400 ml-2 text-sm sm:text-base">
-                      {plan.period}
-                    </span>
-                  )}
-                </div>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  {plan.description}
-                </p>
-                {plan.savings && (
-                  <div className="mt-2 text-green-600 dark:text-green-400 font-semibold text-xs sm:text-sm">
-                    {plan.savings}
-                  </div>
-                )}
-              </div>
-
-              {/* Features */}
-              <div className="mb-6 sm:mb-8">
-                <ul className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* CTA Button */}
-              <GamifiedButton
-                variant={plan.popular ? "vip" : index === 0 ? "secondary" : "primary"}
-                size="lg"
-                coinReward={plan.coinReward}
-                className="w-full"
-              >
-                {index === 0 ? "Start FREE" : index === 1 ? "Go VIP" : "Go Pro"}
-                {plan.coinReward > 0 && (
-                  <span className="ml-2 text-sm">
-                    (+{plan.coinReward} coins)
-                  </span>
-                )}
-              </GamifiedButton>
-
-              {/* Special offer for VIP */}
-              {plan.popular && (
-                <div className="mt-4 text-center">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                    <Gift className="w-4 h-4" />
-                    Launch Special - Save ₹100!
-                  </div>
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </div>
 
         {/* Money back guarantee */}
         <motion.div
