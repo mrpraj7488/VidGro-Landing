@@ -13,7 +13,8 @@ import {
   Eye,
   MessageCircle,
   BarChart3,
-  Globe
+  Globe,
+  Coins
 } from 'lucide-react'
 
 export default function Features() {
