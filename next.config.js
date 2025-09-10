@@ -142,10 +142,29 @@ const nextConfig = {
     
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.vidgro.netlify.app',
+          },
+        ],
+        destination: 'https://vidgro.netlify.app/:path*',
+        permanent: true,
+      },
+    ]
+  },
   headers: async () => [
     {
-      source: '/:path*',
+      source: '/(.*)',
       headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable'
+        },
         {
           key: 'X-DNS-Prefetch-Control',
           value: 'on'
@@ -177,6 +196,19 @@ const nextConfig = {
         {
           key: 'Permissions-Policy',
           value: 'camera=(), microphone=(), geolocation=()'
+        }
+      ]
+    },
+    {
+      source: '/(.*\\.(png|jpg|jpeg|gif|webp|svg|ico))$',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable'
+        },
+        {
+          key: 'Expires',
+          value: new Date(Date.now() + 31536000000).toUTCString()
         }
       ]
     }

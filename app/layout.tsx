@@ -25,8 +25,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'VidGro - Stop Waiting for the Algorithm, Grow Instantly! | Free YouTube Growth',
-  description: 'Join 50,000+ creators who stopped waiting and started growing. Watch videos, earn coins, get real views. 1 coin = 1 guaranteed human view. Get 100 welcome coins instantly - completely free forever!',
+  title: 'VidGro - Free YouTube Growth | Real Views from Real Creators',
+  description: 'Join 50,000+ creators getting real YouTube views. Watch videos, earn coins, promote content. 1 coin = 1 guaranteed view. Get 100 coins free!',
   keywords: 'youtube growth, free youtube views, real views, creator community, youtube marketing, content discovery, earn coins watching videos, youtube viral, creator platform, algorithm alternative',
   authors: [{ name: 'VidGro Team' }],
   creator: 'VidGro',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://vidgro.netlify.app'),
   openGraph: {
     title: 'VidGro - Stop Waiting for the Algorithm, Grow Instantly!',
     description: 'Revolutionary creator-to-creator platform. 1 coin = 1 real view. Get 100 welcome coins instantly - completely free forever!',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description: 'Revolutionary creator platform. 1 coin = 1 real view. 100 welcome coins instantly - free forever!',
   },
   alternates: {
-    canonical: 'https://vidgro.app',
+    canonical: 'https://vidgro.netlify.app',
   },
   robots: {
     index: true,
