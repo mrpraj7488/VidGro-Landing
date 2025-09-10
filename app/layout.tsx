@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   category: 'Social Media Marketing',
   classification: 'YouTube Growth Tools',
   other: {
-    'google-site-verification': 'your-google-verification-code',
+    'google-site-verification': 'uALAOEedYbUaU8Dwb4lucrq7HC6qSRZHkDNdjCaMXAQ',
     'msvalidate.01': 'your-bing-verification-code',
     'yandex-verification': 'your-yandex-verification-code',
     'p:domain_verify': 'your-pinterest-verification-code',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'uALAOEedYbUaU8Dwb4lucrq7HC6qSRZHkDNdjCaMXAQ',
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
     other: {
