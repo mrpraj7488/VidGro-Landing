@@ -80,6 +80,7 @@ export default function HowItWorks() {
                   </motion.div>
 
                   {/* Content */}
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600 mb-1">2,100</div>
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                     {step.title}
                   </h3>

@@ -2,31 +2,45 @@
 
 import dynamic from 'next/dynamic'
 import Hero from '../components/sections/Hero'
+import { Suspense } from 'react'
 
-// Dynamic imports for better performance
+// Loading skeleton component
+const LoadingSkeleton = () => (
+  <div className="min-h-[400px] animate-pulse bg-gray-100 dark:bg-gray-800" />
+)
+
+// Dynamic imports with optimized loading
 const Features = dynamic(() => import('../components/sections/Features'), {
-  loading: () => <div className="min-h-screen" />
+  loading: LoadingSkeleton,
+  ssr: true
 })
 const HowItWorks = dynamic(() => import('../components/sections/HowItWorks'), {
-  loading: () => <div className="min-h-screen" />
+  loading: LoadingSkeleton,
+  ssr: true
 })
 const Testimonials = dynamic(() => import('../components/sections/Testimonials'), {
-  loading: () => <div className="min-h-screen" />
+  loading: LoadingSkeleton,
+  ssr: true
 })
 const SocialProof = dynamic(() => import('../components/sections/SocialProof'), {
-  loading: () => <div className="min-h-screen" />
+  loading: LoadingSkeleton,
+  ssr: false
 })
 const FAQ = dynamic(() => import('../components/sections/FAQ'), {
-  loading: () => <div className="min-h-screen" />
+  loading: LoadingSkeleton,
+  ssr: true
 })
 const CTA = dynamic(() => import('../components/sections/CTA'), {
-  loading: () => <div className="min-h-screen" />
+  loading: LoadingSkeleton,
+  ssr: false
 })
 const Pricing = dynamic(() => import('../components/sections/Pricing'), {
-  loading: () => <div className="min-h-screen" />
+  loading: LoadingSkeleton,
+  ssr: true
 })
 const ThemeToggle = dynamic(() => import('../components/ui/ThemeToggle'), {
-  ssr: false
+  ssr: false,
+  loading: () => null
 })
 
 export default function HomePage() {

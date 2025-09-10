@@ -202,12 +202,12 @@ export default function Testimonials() {
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                onClick={() => goToTestimonial(index)}
+                onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-indigo-500 w-6 sm:w-8' 
-                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-indigo-300'
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentIndex === index
+                    ? 'bg-indigo-500 w-6'
+                    : 'bg-gray-300 dark:bg-gray-600'
                 }`}
               />
             ))}

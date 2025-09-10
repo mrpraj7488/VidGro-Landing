@@ -11,15 +11,17 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
   preload: true,
   adjustFontFallback: true,
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 })
 
 const poppins = Poppins({ 
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   preload: true,
   adjustFontFallback: true,
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 })
 
 export const metadata: Metadata = {
@@ -75,7 +77,10 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://images.pexels.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <meta name="theme-color" content="#10b981" />
+        <link rel="preload" as="style" href="/_next/static/css/app/layout.css" />
       </head>
       <body className={inter.className}>
         {children}
