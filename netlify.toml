@@ -39,9 +39,6 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[plugins]]
-  package = "netlify-plugin-cache-nextjs"
-
 [build.processing]
   skip_processing = false
 
