@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
 
   const testimonials = [
     {
@@ -66,33 +66,44 @@ export default function Testimonials() {
     }
   ]
 
+  // Check if mobile on client side
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   // Auto-advance testimonials - always on
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => {
-        // On mobile, advance by 1; on larger screens, advance by 2
-        const increment = window.innerWidth < 640 ? 1 : 2
+        const increment = isMobile ? 1 : 2
         return (prev + increment) % testimonials.length
       })
     }, 6000)
 
     return () => clearInterval(interval)
-  }, [testimonials.length])
+  }, [testimonials.length, isMobile])
 
   const nextTestimonials = () => {
-    const increment = window.innerWidth < 640 ? 1 : 2
+    const increment = isMobile ? 1 : 2
     setCurrentIndex((prev) => (prev + increment) % testimonials.length)
   }
 
   const prevTestimonials = () => {
-    const increment = window.innerWidth < 640 ? 1 : 2
+    const increment = isMobile ? 1 : 2
     setCurrentIndex((prev) => (prev - increment + testimonials.length) % testimonials.length)
   }
 
   // Get current testimonials - single on mobile, pair on larger screens
   const getCurrentTestimonials = () => {
     const first = testimonials[currentIndex]
-    if (typeof window !== 'undefined' && window.innerWidth < 640) {
+    if (isMobile) {
       return [first] // Single card on mobile
     }
     const second = testimonials[(currentIndex + 1) % testimonials.length]
@@ -222,16 +233,16 @@ export default function Testimonials() {
 
           {/* Testimonial indicators - adjust for mobile vs desktop */}
           <div className="flex justify-center gap-2 mt-6 sm:mt-8">
-            {Array.from({ length: typeof window !== 'undefined' && window.innerWidth < 640 ? testimonials.length : Math.ceil(testimonials.length / 2) }).map((_, index) => (
+            {Array.from({ length: isMobile ? testimonials.length : Math.ceil(testimonials.length / 2) }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
-                  const multiplier = typeof window !== 'undefined' && window.innerWidth < 640 ? 1 : 2
+                  const multiplier = isMobile ? 1 : 2
                   setCurrentIndex(index * multiplier)
                 }}
                 aria-label={`Go to testimonial ${index + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  (typeof window !== 'undefined' && window.innerWidth < 640 ? currentIndex : Math.floor(currentIndex / 2)) === index
+                  (isMobile ? currentIndex : Math.floor(currentIndex / 2)) === index
                     ? 'bg-indigo-500 w-8'
                     : 'bg-gray-300 dark:bg-gray-600 w-2'
                 }`}
