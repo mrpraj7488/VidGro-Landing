@@ -4,6 +4,7 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import JsonLD from '@/components/seo/JsonLD'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -20,9 +21,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'VidGro - Grow Your Video Content',
-  description: 'Transform your video content strategy with VidGro. Boost engagement, increase views, and grow your audience.',
-  keywords: 'video growth, content strategy, video marketing, audience engagement',
+  title: 'VidGro - Get Your First 1000 YouTube Views Free (No Bots!)',
+  description: 'Join 50,000+ creators getting real views. Watch videos, earn coins, promote your content. 100% safe, YouTube compliant. Start free today - no credit card needed.',
+  keywords: 'youtube growth, video promotion, creator community, real views, youtube marketing, content discovery, creator economy',
   authors: [{ name: 'VidGro Team' }],
   creator: 'VidGro',
   publisher: 'VidGro',
@@ -33,8 +34,9 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   openGraph: {
-    title: 'VidGro - Grow Your Video Content',
-    description: 'Transform your video content strategy with VidGro',
+    title: 'VidGro - Real YouTube Views from Real Creators',
+    description: 'Stop uploading to zero views. Get discovered with VidGro.',
+    images: ['/og-image-1200x630.png'],
     url: '/',
     siteName: 'VidGro',
     locale: 'en_US',
@@ -42,8 +44,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VidGro - Grow Your Video Content',
-    description: 'Transform your video content strategy with VidGro',
+    title: 'Get Your YouTube Videos Seen - VidGro',
+    description: 'The creator economy platform for real YouTube growth',
+  },
+  alternates: {
+    canonical: 'https://vidgro.app',
   },
   robots: {
     index: true,
@@ -67,6 +72,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className={inter.className}>
         {children}
+        <JsonLD />
         <GoogleAnalytics />
         <Analytics />
         <SpeedInsights />

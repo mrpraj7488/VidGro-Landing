@@ -8,10 +8,25 @@
 
 @layer base {
   :root {
-    --font-inter: 'Inter', system-ui, sans-serif;
-    --font-poppins: 'Poppins', system-ui, sans-serif;
+    /* Light Mode - Energetic & Trustworthy */
+    --primary: #4F46E5; /* Indigo - Trust */
+    --secondary: #EC4899; /* Pink - Excitement */
+    --accent: #10B981; /* Emerald - Growth */
+    --gold: #F59E0B; /* Amber - Rewards */
+    --bg-base: #FFFFFF;
+    --bg-elevated: #F9FAFB;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
     
-    /* Light mode colors */
+    /* Gradients for CTAs */
+    --gradient-cta: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    --gradient-vip: linear-gradient(135deg, #F093FB 0%, #F5576C 100%);
+    
+    /* Shadows with Color */
+    --shadow-glow: 0 0 40px rgba(79, 70, 229, 0.3);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+    
+    /* Default CSS variables */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -32,6 +47,26 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 349 89% 60%;
     --radius: 0.5rem;
+  }
+
+  [data-theme="dark"] {
+    /* Dark Mode - Premium & Mysterious */
+    --primary: #818CF8;
+    --secondary: #F472B6;
+    --accent: #34D399;
+    --gold: #FCD34D;
+    --bg-base: #0F172A;
+    --bg-elevated: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    
+    /* Dark Gradients */
+    --gradient-cta: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    --gradient-vip: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    
+    /* Neon Glow Effects */
+    --shadow-glow: 0 0 60px rgba(129, 140, 248, 0.5);
+    --shadow-hover: 0 20px 40px rgba(129, 140, 248, 0.2);
   }
 
   .dark {
@@ -94,7 +129,10 @@
 @layer components {
   /* Gradient text utility */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   /* Glass morphism effect */
@@ -122,7 +160,46 @@
 
   /* Button hover effects */
   .btn-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-hover:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .btn-hover:active {
+    transform: scale(0.95);
+  }
+
+  /* Gradient mesh background */
+  .bg-gradient-mesh {
+    background: linear-gradient(135deg, var(--bg-base) 0%, var(--bg-elevated) 100%);
+    background-size: 400% 400%;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Custom breakpoints */
+  @media (max-width: 390px) { /* iPhone 12 Mini */
+    .hero-title {
+      font-size: clamp(2rem, 8vw, 3rem);
+    }
+  }
+  
+  @media (max-width: 428px) { /* iPhone 14 Pro Max */
+    .hero-title {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+  }
+  
+  /* Touch-optimized tap targets */
+  .cta-button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 16px 32px;
   }
 }
 
@@ -147,4 +224,34 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Bento grid layout */
+  .bento-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* Featured card spans 2 columns on desktop */
+  .featured-card {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* Mobile: Stack all cards */
+  @media (max-width: 768px) {
+    .featured-card {
+      grid-column: span 1;
+    }
+  }
+}
+
+@keyframes shimmer {
+  '0%': { backgroundPosition: '-200% 0' },
+  '100%': { backgroundPosition: '200% 0' },
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) }
+  50% { transform: translateY(-20px) }
 }
