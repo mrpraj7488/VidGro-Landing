@@ -3,87 +3,21 @@
 import { motion } from 'framer-motion'
 import { Check, Crown, Zap, Star, Gift } from 'lucide-react'
 import GamifiedButton from '@/components/ui/GamifiedButton'
+import { pricingPlans } from '@/lib/seo-content'
 
 export default function Pricing() {
-  const plans = [
-    {
-      name: "Free Creator",
-      price: "Free",
-      period: "Forever",
-      description: "Perfect for getting started and testing the waters",
-      features: [
-        "200 free coins to start",
-        "Watch videos to earn coins",
-        "Promote your content",
-        "Basic analytics",
-        "Community access",
-        "Email support"
-      ],
-      buttonText: "Start Free",
-      buttonVariant: "secondary" as const,
-      popular: false,
-      coinReward: 200
-    },
-    {
-      name: "VIP Creator",
-      price: "$9.99",
-      period: "per month",
-      description: "For serious creators ready to accelerate their growth",
-      features: [
-        "Everything in Free",
-        "1,000 bonus coins monthly",
-        "Priority video promotion",
-        "Advanced analytics dashboard",
-        "Direct creator messaging",
-        "VIP community access",
-        "Priority support",
-        "Custom promotion targeting",
-        "Achievement badges",
-        "Early access to new features"
-      ],
-      buttonText: "Go VIP",
-      buttonVariant: "vip" as const,
-      popular: true,
-      coinReward: 1000,
-      savings: "Save 40% vs buying coins"
-    },
-    {
-      name: "Pro Creator",
-      price: "$24.99",
-      period: "per month",
-      description: "For established creators and agencies",
-      features: [
-        "Everything in VIP",
-        "3,000 bonus coins monthly",
-        "Multiple channel management",
-        "White-label analytics",
-        "API access",
-        "Dedicated account manager",
-        "Custom integrations",
-        "Advanced targeting options",
-        "Bulk promotion tools",
-        "Priority feature requests"
-      ],
-      buttonText: "Go Pro",
-      buttonVariant: "primary" as const,
-      popular: false,
-      coinReward: 3000,
-      savings: "Save 60% vs buying coins"
-    }
-  ]
-
   const faqs = [
     {
-      q: "Can I really start for free?",
-      a: "Absolutely! You get 200 free coins to start promoting your content immediately. No credit card required."
+      q: "How does the coin system work?",
+      a: "Simple! Watch videos to earn coins (1 coin per 30-second watch), then spend coins to promote your videos (1 coin = 1 real view). You start with 200 FREE coins!"
     },
     {
-      q: "What happens if I run out of coins?",
-      a: "Simply watch more videos from other creators to earn more coins. It's that easy!"
+      q: "What are the VIP benefits?",
+      a: "VIP members get unlimited daily coin earning (no 50-coin limit), 10-15% promotion discounts, priority queue placement, ad-free experience, and premium support."
     },
     {
-      q: "Can I cancel my VIP subscription anytime?",
-      a: "Yes, you can cancel anytime. Your VIP benefits continue until the end of your billing period."
+      q: "How much can I earn from referrals?",
+      a: "You earn 400 coins for every friend who joins VidGro and watches their first video. Your friend also gets 200 bonus coins. There's no limit to how many friends you can refer!"
     }
   ]
 
@@ -98,17 +32,17 @@ export default function Pricing() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-            Choose Your Growth Plan
+            Start FREE, Upgrade When Ready
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-            Start free and upgrade when you're ready to accelerate your growth. 
-            All plans include access to our amazing creator community.
+            Begin your YouTube growth journey with 200 FREE coins. Upgrade to VIP for unlimited 
+            earning potential and exclusive benefits that pay for themselves.
           </p>
         </motion.div>
 
         {/* Pricing cards */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
-          {plans.map((plan, index) => (
+          {pricingPlans.map((plan, index) => (
             <motion.div
               key={index}
               className={`
@@ -143,6 +77,10 @@ export default function Pricing() {
                   <span className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
                     {plan.price}
                   </span>
+                  {plan.originalPrice && (
+                    <span className="text-lg text-gray-500 line-through ml-2">
+                      {plan.originalPrice}
+                  </span>
                   {plan.period !== "Forever" && (
                     <span className="text-gray-600 dark:text-gray-400 ml-2 text-sm sm:text-base">
                       {plan.period}
@@ -175,12 +113,12 @@ export default function Pricing() {
 
               {/* CTA Button */}
               <GamifiedButton
-                variant={plan.buttonVariant}
+                variant={plan.popular ? "vip" : index === 0 ? "secondary" : "primary"}
                 size="lg"
                 coinReward={plan.coinReward}
                 className="w-full"
               >
-                {plan.buttonText}
+                {index === 0 ? "Start FREE" : index === 1 ? "Go VIP" : "Go Pro"}
                 {plan.coinReward > 0 && (
                   <span className="ml-2 text-sm">
                     (+{plan.coinReward} coins)
@@ -193,7 +131,7 @@ export default function Pricing() {
                 <div className="mt-4 text-center">
                   <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
                     <Gift className="w-4 h-4" />
-                    First month 50% off!
+                    Launch Special - Save ₹100!
                   </div>
                 </div>
               )}
@@ -211,7 +149,7 @@ export default function Pricing() {
         >
           <div className="inline-flex items-center gap-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-green-200 dark:border-green-800 text-sm sm:text-base">
             <Star className="w-5 h-5" />
-            <span className="font-semibold">30-day money-back guarantee</span>
+            <span className="font-semibold">3-day money-back guarantee</span>
           </div>
         </motion.div>
 
@@ -224,7 +162,7 @@ export default function Pricing() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 dark:text-white mb-6 sm:mb-8">
-            Frequently Asked Questions
+            Common Questions About VidGro
           </h3>
           <div className="space-y-6">
             {faqs.map((faq, index) => (

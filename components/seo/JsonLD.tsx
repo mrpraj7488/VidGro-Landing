@@ -9,7 +9,7 @@ export default function JsonLD() {
     "name": "VidGro",
     "url": "https://vidgro.app",
     "logo": "https://vidgro.app/logo.png",
-    "description": "The creator economy platform for real YouTube growth. Join 50,000+ creators getting real views from real people.",
+    "description": "Revolutionary creator-to-creator YouTube growth platform where 1 coin = 1 guaranteed real view. Join 50,000+ creators earning coins and promoting content.",
     "foundingDate": "2024",
     "sameAs": [
       "https://twitter.com/vidgro",
@@ -31,11 +31,11 @@ export default function JsonLD() {
     "url": "https://vidgro.app",
     "applicationCategory": "SocialNetworkingApplication",
     "operatingSystem": "Web Browser",
-    "description": "Watch videos, earn coins, promote your content. 100% safe, YouTube compliant platform for creator growth.",
+    "description": "Revolutionary creator platform: watch videos to earn coins, spend coins to get real views. 1 coin = 1 guaranteed human view. Start with 200 FREE coins!",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
-      "ratingCount": "12543",
+      "ratingCount": "15000",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -47,11 +47,14 @@ export default function JsonLD() {
       "validFrom": "2024-01-01"
     },
     "featureList": [
-      "Real creator community",
-      "Coin-based promotion system",
-      "YouTube compliant growth",
-      "Advanced analytics",
-      "Community engagement tools"
+      "1 coin = 1 guaranteed real view",
+      "Watch videos to earn coins",
+      "200 FREE welcome coins",
+      "Referral program (400 coins per friend)",
+      "VIP unlimited earning potential",
+      "YouTube TOS compliant",
+      "Real-time analytics",
+      "24-48 hour results"
     ]
   }
 
@@ -71,35 +74,35 @@ export default function JsonLD() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "YouTube Growth Platform",
+    "name": "VidGro Creator Growth Platform",
     "provider": {
       "@type": "Organization",
       "name": "VidGro"
     },
-    "description": "Community-powered YouTube growth platform where creators help creators get discovered",
-    "serviceType": "Social Media Growth",
+    "description": "Revolutionary creator-to-creator YouTube growth platform. Watch videos, earn coins, get real views. 1 coin = 1 guaranteed human view.",
+    "serviceType": "YouTube Growth Service",
     "areaServed": "Worldwide",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "VidGro Plans",
+      "name": "VidGro Creator Plans",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Free Creator Plan"
+            "name": "Free Creator Plan - 200 FREE Coins"
           },
           "price": "0",
-          "priceCurrency": "USD"
+          "priceCurrency": "INR"
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "VIP Creator Plan"
+            "name": "VIP Creator Plan - Unlimited Earning"
           },
-          "price": "9.99",
-          "priceCurrency": "USD"
+          "price": "299",
+          "priceCurrency": "INR"
         }
       ]
     }

@@ -72,12 +72,12 @@ export default function CTA() {
             </div>
 
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ready to Get Discovered?
+              Ready to Go Viral?
             </h2>
             
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Stop uploading to zero views. Join the community where creators help creators grow. 
-              <span className="font-semibold"> Your breakthrough moment starts now.</span>
+              Join 50,000+ creators who are already using VidGro to transform their YouTube channels. 
+              <span className="font-semibold"> Start with 200 FREE coins - no credit card required!</span>
             </p>
           </motion.div>
 
@@ -116,7 +116,7 @@ export default function CTA() {
               coinReward={200}
               className="min-w-[280px] bg-white text-primary-600 hover:bg-gray-50"
             >
-              Start Growing Free
+              Get 200 FREE Coins Now
               <ArrowRight className="w-5 h-5 ml-2" />
             </GamifiedButton>
             
@@ -126,7 +126,7 @@ export default function CTA() {
               coinReward={1000}
               className="min-w-[200px]"
             >
-              Go VIP - 50% Off
+              Go VIP - Save ₹100
             </GamifiedButton>
           </motion.div>
 
@@ -139,7 +139,7 @@ export default function CTA() {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <div className="text-white/80 text-sm font-medium mb-3">
-              🔥 VIP Launch Special Ends In:
+              🔥 Launch Pricing Ends In:
             </div>
             <div className="flex justify-center gap-4">
               {[
@@ -170,14 +170,14 @@ export default function CTA() {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <div className="text-white/60 text-sm mb-4">
-              Trusted by creators worldwide
+              Join the VidGro creator revolution
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               {/* Placeholder for trust badges/logos */}
-              <div className="text-white text-sm">✓ YouTube Compliant</div>
-              <div className="text-white text-sm">✓ 30-Day Guarantee</div>
+              <div className="text-white text-sm">✓ 200 FREE Coins</div>
+              <div className="text-white text-sm">✓ 3-Day Guarantee</div>
               <div className="text-white text-sm">✓ No Credit Card Required</div>
-              <div className="text-white text-sm">✓ Cancel Anytime</div>
+              <div className="text-white text-sm">✓ Real Human Views</div>
             </div>
           </motion.div>
         </div>

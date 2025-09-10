@@ -21,9 +21,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'VidGro - Get Your First 1000 YouTube Views Free (No Bots!)',
-  description: 'Join 50,000+ creators getting real views. Watch videos, earn coins, promote your content. 100% safe, YouTube compliant. Start free today - no credit card needed.',
-  keywords: 'youtube growth, video promotion, creator community, real views, youtube marketing, content discovery, creator economy',
+  title: 'VidGro - Go Viral Without Spending a Dime! 💰 | 1 Coin = 1 Real View',
+  description: 'Join 50,000+ creators in the revolutionary platform where 1 coin = 1 guaranteed real view. Watch videos, earn coins, promote your content. Start with 200 FREE coins - no credit card required!',
+  keywords: 'youtube growth, video promotion, creator community, real views, youtube marketing, content discovery, creator economy, free youtube views, earn coins watching videos, youtube viral, creator platform',
   authors: [{ name: 'VidGro Team' }],
   creator: 'VidGro',
   publisher: 'VidGro',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   openGraph: {
-    title: 'VidGro - Real YouTube Views from Real Creators',
-    description: 'Stop uploading to zero views. Get discovered with VidGro.',
+    title: 'VidGro - Go Viral Without Spending a Dime! 💰',
+    description: 'Revolutionary creator-to-creator platform. 1 coin = 1 real view. Start with 200 FREE coins!',
     images: ['/og-image-1200x630.png'],
     url: '/',
     siteName: 'VidGro',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Get Your YouTube Videos Seen - VidGro',
-    description: 'The creator economy platform for real YouTube growth',
+    title: 'VidGro - Go Viral Without Spending a Dime! 💰',
+    description: 'Revolutionary creator platform. 1 coin = 1 real view. 200 FREE coins to start!',
   },
   alternates: {
     canonical: 'https://vidgro.app',

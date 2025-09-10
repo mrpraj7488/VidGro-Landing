@@ -19,68 +19,68 @@ import {
 export default function Features() {
   const features = [
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "100% YouTube Safe",
-      description: "Fully compliant with YouTube's terms of service. No bots, no fake accounts, just real creators.",
+      icon: <Coins className="w-6 h-6" />,
+      title: "1 Coin = 1 Real View",
+      description: "Simple, transparent pricing. Every coin guarantees one real human view from engaged VidGro creators.",
       color: "from-green-500 to-green-600",
       size: "large"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Real Creator Community",
-      description: "Connect with genuine creators who share your passion for quality content.",
+      title: "Watch & Earn System",
+      description: "Earn 1 coin per video you watch (30+ seconds). Free users earn up to 50 coins daily, VIP unlimited.",
       color: "from-blue-500 to-blue-600",
       size: "medium"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Organic Growth",
-      description: "Sustainable growth that builds real audience engagement over time.",
+      icon: <Heart className="w-6 h-6" />,
+      title: "Massive Referral Rewards",
+      description: "Earn 400 coins for every friend who joins! Your friend gets 200 bonus coins too.",
       color: "from-purple-500 to-purple-600",
       size: "medium"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Instant Results",
-      description: "Start seeing views within minutes of promoting your content.",
+      title: "24-48 Hour Results",
+      description: "See your view count grow within 24-48 hours of promoting your video.",
       color: "from-yellow-500 to-yellow-600",
       size: "small"
     },
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Quality Engagement",
-      description: "Get meaningful comments and feedback from real viewers.",
+      icon: <Shield className="w-6 h-6" />,
+      title: "YouTube TOS Compliant",
+      description: "100% safe for your channel. Real views from real creators, no bots or fake accounts.",
       color: "from-red-500 to-red-600",
       size: "small"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Targeted Audience",
-      description: "Reach creators interested in your specific niche and content type.",
+      title: "Free Coin Opportunities",
+      description: "Watch ads for 100 coins every 2 hours. Rate the app for 100 coins. Daily bonuses available.",
       color: "from-indigo-500 to-indigo-600",
       size: "medium"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Achievement System",
-      description: "Unlock badges and rewards as you grow your presence in the community.",
+      title: "VIP Growth Acceleration",
+      description: "Unlimited daily earnings, 10-15% discounts, priority placement, and premium support.",
       color: "from-orange-500 to-orange-600",
       size: "small"
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
-      title: "Premium Features",
-      description: "Access advanced analytics, priority promotion, and exclusive creator tools.",
+      title: "Advanced Analytics",
+      description: "Track real-time views, engagement metrics, completion rates, and ROI with detailed insights.",
       color: "from-pink-500 to-pink-600",
       size: "large"
     }
   ]
 
   const stats = [
-    { icon: <Eye className="w-5 h-5" />, label: "Average View Rate", value: "87%" },
-    { icon: <MessageCircle className="w-5 h-5" />, label: "Engagement Rate", value: "23%" },
-    { icon: <BarChart3 className="w-5 h-5" />, label: "Retention Rate", value: "94%" },
-    { icon: <Globe className="w-5 h-5" />, label: "Global Reach", value: "150+ Countries" }
+    { icon: <Users className="w-5 h-5" />, label: "Active Creators", value: "50,000+" },
+    { icon: <Coins className="w-5 h-5" />, label: "Coins Earned", value: "2.5M+" },
+    { icon: <TrendingUp className="w-5 h-5" />, label: "Videos Promoted", value: "500K+" },
+    { icon: <Award className="w-5 h-5" />, label: "Success Rate", value: "95%" }
   ]
 
   return (
@@ -94,11 +94,11 @@ export default function Features() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-            Everything You Need to Grow
+            Why 50,000+ Creators Choose VidGro
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-            Powerful features designed to help creators discover each other and build 
-            genuine communities around quality content.
+            The revolutionary platform where creators help creators grow. Real views, 
+            real engagement, real results - all starting completely FREE.
           </p>
         </motion.div>
 
@@ -159,10 +159,10 @@ export default function Features() {
         >
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Platform Performance
+              VidGro by the Numbers
             </h3>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-              See why creators choose VidGro for sustainable growth
+              Real stats from our thriving creator community
             </p>
           </div>
 

@@ -138,8 +138,8 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           Join <span className="font-semibold text-indigo-600">{stats.creatorsJoined.toLocaleString()}+</span> creators 
-          getting real views from real people. Watch videos, earn coins, promote your content. 
-          <span className="font-semibold"> 100% safe, YouTube compliant.</span>
+          in the revolutionary platform where <span className="font-semibold">1 coin = 1 guaranteed real view</span>. 
+          Watch videos, earn coins, promote your content. <span className="font-semibold">Start with 200 FREE coins!</span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -156,7 +156,7 @@ export default function Hero() {
             className="w-full sm:min-w-[280px] sm:w-auto"
           >
             <Sparkles className="w-5 h-5 mr-2" />
-            {ctaVariations.primary[0]}
+            Get 200 FREE Coins Now
           </GamifiedButton>
           
           <GamifiedButton
@@ -164,7 +164,7 @@ export default function Hero() {
             size="lg"
             className="w-full sm:min-w-[200px] sm:w-auto"
           >
-            {ctaVariations.secondary[0]}
+            See How It Works
           </GamifiedButton>
         </motion.div>
 
@@ -177,15 +177,15 @@ export default function Hero() {
         >
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4 text-green-500" />
-            <span>100% YouTube Safe</span>
+            <span>YouTube TOS Compliant</span>
           </div>
           <div className="flex items-center gap-2">
             <Users className="w-4 h-4 text-blue-500" />
-            <span>Real Creators Only</span>
+            <span>Real Human Views</span>
           </div>
           <div className="flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-purple-500" />
-            <span>Proven Results</span>
+            <span>24-48 Hour Results</span>
           </div>
         </motion.div>
 
@@ -199,7 +199,7 @@ export default function Hero() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <div className="text-center">
               <motion.div
-                className="text-2xl sm:text-3xl font-bold text-indigo-600 mb-1"
+                className="text-2xl sm:text-3xl font-bold text-green-600 mb-1"
                 key={stats.activeUsers}
                 initial={{ scale: 1 }}
                 animate={{ scale: [1, 1.1, 1] }}
@@ -207,13 +207,13 @@ export default function Hero() {
               >
                 {stats.activeUsers.toLocaleString()}
               </motion.div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Active Users</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Active Creators</div>
               <div className="w-2 h-2 bg-green-500 rounded-full mx-auto mt-2 animate-pulse" />
             </div>
             
             <div className="text-center">
               <motion.div
-                className="text-2xl sm:text-3xl font-bold text-pink-600 mb-1"
+                className="text-2xl sm:text-3xl font-bold text-yellow-600 mb-1"
                 key={stats.viewsDelivered}
                 initial={{ scale: 1 }}
                 animate={{ scale: [1, 1.1, 1] }}
@@ -221,12 +221,12 @@ export default function Hero() {
               >
                 {(stats.viewsDelivered / 1000000).toFixed(1)}M+
               </motion.div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Views Delivered</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Coins Earned</div>
             </div>
             
             <div className="text-center">
               <motion.div
-                className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-1"
+                className="text-2xl sm:text-3xl font-bold text-purple-600 mb-1"
                 key={stats.creatorsJoined}
                 initial={{ scale: 1 }}
                 animate={{ scale: [1, 1.1, 1] }}
@@ -234,7 +234,7 @@ export default function Hero() {
               >
                 {(stats.creatorsJoined / 1000).toFixed(0)}K+
               </motion.div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Creators Joined</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Videos Promoted</div>
             </div>
           </div>
         </motion.div>

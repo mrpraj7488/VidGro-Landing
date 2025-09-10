@@ -49,10 +49,10 @@ export default function SocialProof() {
   }, [])
 
   const trustBadges = [
-    { icon: <Youtube className="w-5 h-5" />, text: "YouTube Compliant" },
-    { icon: <Shield className="w-5 h-5" />, text: "100% Safe" },
-    { icon: <Users className="w-5 h-5" />, text: "Real Creators" },
-    { icon: <CheckCircle className="w-5 h-5" />, text: "No Bots" }
+    { icon: <Youtube className="w-5 h-5" />, text: "YouTube TOS Compliant" },
+    { icon: <Shield className="w-5 h-5" />, text: "Real Human Views Only" },
+    { icon: <Users className="w-5 h-5" />, text: "50,000+ Active Creators" },
+    { icon: <CheckCircle className="w-5 h-5" />, text: "1 Coin = 1 Real View" }
   ]
 
   return (
@@ -168,7 +168,7 @@ export default function SocialProof() {
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg text-sm sm:text-base">
             <TrendingUp className="w-4 h-4" />
             <span className="font-semibold">
-              Only {limitedSpots} free accounts left today
+              Only {limitedSpots} VIP spots left at launch price
             </span>
           </div>
         </motion.div>

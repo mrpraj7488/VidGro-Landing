@@ -7,22 +7,22 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: <Play className="w-8 h-8" />,
-      title: "Watch & Discover",
-      description: "Browse and watch amazing content from fellow creators. Find your new favorite channels while earning coins.",
+      title: "Watch & Earn Coins",
+      description: "Watch videos from fellow creators for at least 30 seconds and earn 1 coin per video. Free users can earn up to 50 coins daily!",
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50 dark:bg-blue-900/20"
     },
     {
       icon: <Coins className="w-8 h-8" />,
-      title: "Earn Coins",
-      description: "Get rewarded with coins for every video you watch and engage with. The more you participate, the more you earn.",
+      title: "Multiple Ways to Earn",
+      description: "Earn coins by watching videos, referring friends (400 coins each!), watching ads (100 coins every 2 hours), and daily bonuses.",
       color: "from-yellow-500 to-yellow-600",
       bgColor: "bg-yellow-50 dark:bg-yellow-900/20"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Promote Your Content",
-      description: "Spend your coins to get your videos seen by real creators who are genuinely interested in discovering new content.",
+      title: "Get Real Views",
+      description: "Spend coins to promote your videos. 1 coin = 1 guaranteed real view from engaged creators. See results in 24-48 hours!",
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50 dark:bg-green-900/20"
     }
@@ -39,11 +39,11 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-            How It Works
+            How VidGro Works
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-            It's simple: creators helping creators. Watch content you love, earn coins, 
-            and use those coins to get your own content discovered.
+            The revolutionary creator-to-creator growth system. Watch videos, earn coins, 
+            promote your content, and grow together with 50,000+ creators worldwide.
           </p>
         </motion.div>
 
@@ -114,10 +114,10 @@ export default function HowItWorks() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
-              { number: "2.4M+", label: "Views Delivered", icon: <TrendingUp className="w-6 h-6" /> },
-              { number: "48K+", label: "Active Creators", icon: <Users className="w-6 h-6" /> },
-              { number: "1.2M+", label: "Coins Earned", icon: <Coins className="w-6 h-6" /> },
-              { number: "98%", label: "Satisfaction Rate", icon: <Play className="w-6 h-6" /> }
+              { number: "2.5M+", label: "Coins Earned", icon: <Coins className="w-6 h-6" /> },
+              { number: "50K+", label: "Active Creators", icon: <Users className="w-6 h-6" /> },
+              { number: "500K+", label: "Videos Promoted", icon: <TrendingUp className="w-6 h-6" /> },
+              { number: "95%", label: "Success Rate", icon: <Play className="w-6 h-6" /> }
             ].map((stat, index) => (
               <motion.div
                 key={index}
