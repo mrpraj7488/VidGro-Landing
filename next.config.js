@@ -24,8 +24,6 @@ const nextConfig = {
       transform: 'lucide-react/dist/esm/icons/{{member}}',
     },
   },
-  // Target modern browsers only to remove polyfills
-  target: 'serverless',
   env: {
     NEXT_TELEMETRY_DISABLED: '1',
   },
