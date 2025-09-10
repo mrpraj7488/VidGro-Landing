@@ -32,6 +32,7 @@ export default function GamifiedButton({
   const variants = {
     primary: 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg hover:shadow-primary-500/25',
     secondary: 'bg-white hover:bg-gray-50 text-primary-600 border-2 border-primary-500 shadow-lg',
+    vip: 'bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white shadow-lg hover:shadow-purple-500/25',
   }
 
   const sizes = {
