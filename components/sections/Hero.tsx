@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Users, TrendingUp, Shield, Sparkles } from 'lucide-react'
-import GamifiedButton from '@/components/ui/GamifiedButton'
-import { heroHeadlines, ctaVariations } from '@/lib/seo-content'
+import GamifiedButton from '../ui/GamifiedButton'
+import { heroHeadlines, ctaVariations } from '../../lib/seo-content'
 
 export default function Hero() {
   const [currentHeadline, setCurrentHeadline] = useState(0)

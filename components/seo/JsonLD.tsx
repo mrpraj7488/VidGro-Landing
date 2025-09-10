@@ -1,6 +1,6 @@
 'use client'
 
-import { faqVariations } from '@/lib/seo-content'
+import { faqVariations } from '../../lib/seo-content'
 
 export default function JsonLD() {
   const organizationSchema = {

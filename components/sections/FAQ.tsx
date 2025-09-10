@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, HelpCircle } from 'lucide-react'
-import { faqVariations } from '@/lib/seo-content'
+import { faqVariations } from '../../lib/seo-content'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)

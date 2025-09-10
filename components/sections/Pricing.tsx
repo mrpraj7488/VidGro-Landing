@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Check, Crown, Zap, Star, Gift } from 'lucide-react'
-import GamifiedButton from '@/components/ui/GamifiedButton'
+import GamifiedButton from '../ui/GamifiedButton'
 
 export default function Pricing() {
   const faqs = [

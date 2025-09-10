@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Star, Users, TrendingUp, Shield, Youtube, CheckCircle } from 'lucide-react'
-import { urgencyElements, microTestimonials } from '@/lib/seo-content'
+import { urgencyElements, microTestimonials } from '../../lib/seo-content'
 
 export default function SocialProof() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)

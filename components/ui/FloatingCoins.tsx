@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { coinPhysics, particleConfig } from '@/lib/animations'
+import { coinPhysics, particleConfig } from '../../lib/animations'
 
 interface Coin {
   id: string
