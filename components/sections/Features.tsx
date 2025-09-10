@@ -22,63 +22,63 @@ export default function Features() {
     {
       icon: <Coins className="w-6 h-6" />,
       title: "1 Coin = 1 Real View",
-      description: "Simple, transparent system. Every coin guarantees one real human view from engaged VidGro creators - no bots, no fake accounts.",
+      description: "Simple, transparent system. Every coin you earn becomes a guaranteed real view on your video from engaged VidGro creators - no bots, no fake accounts.",
       color: "from-green-500 to-green-600",
       size: "large"
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Watch & Earn System",
-      description: "Earn 1 coin per video you watch (30+ seconds). No daily limits - watch more, earn more, promote more.",
+      description: "Watch 30+ seconds = coins in your wallet. Longer videos = bigger rewards. No daily limits - watch more, earn more, promote more.",
       color: "from-blue-500 to-blue-600",
       size: "medium"
     },
     {
       icon: <Heart className="w-6 h-6" />,
       title: "Referral Rewards",
-      description: "Invite friends and both earn bonus coins. Build your network while growing your coin balance for more promotions.",
+      description: "Invite friends → both get coins. More friends = more free promotions. Build your network while growing your coin balance.",
       color: "from-purple-500 to-purple-600",
       size: "medium"
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Instant Results",
-      description: "See your view count grow within 24 hours of promoting your video. Stop waiting, start growing.",
+      description: "Stop waiting for the algorithm. Launch campaigns anytime with guaranteed delivery. See your view count grow within 24 hours.",
       color: "from-yellow-500 to-yellow-600",
       size: "small"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "YouTube TOS Compliant",
-      description: "100% safe for your channel. Real engagement from real creators helps the algorithm discover your content.",
+      description: "100% safe for your channel. Real engagement from real creators helps the algorithm discover your content naturally.",
       color: "from-red-500 to-red-600",
       size: "small"
     },
     {
       icon: <Target className="w-6 h-6" />,
       title: "Free Coin Opportunities",
-      description: "Multiple ways to earn: daily bonuses, achievements, referrals, and optional ad viewing. Always free.",
+      description: "Daily bonuses, achievements, referrals, and watch short ads for bonus coins. Multiple ways to earn - always free.",
       color: "from-indigo-500 to-indigo-600",
       size: "medium"
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
       title: "Gamified Experience",
-      description: "Progress bars, achievements, streaks, and leaderboards make growing your channel fun and engaging.",
+      description: "Progress bars, achievements, streaks, and leaderboards keep you motivated while your channel explodes with growth.",
       color: "from-pink-500 to-pink-600",
       size: "small"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics",
-      description: "Track real-time views, engagement metrics, completion rates, and campaign performance with detailed insights.",
+      description: "Track real-time views, engagement metrics, completion rates, and campaign performance. Every coin = delivered view guaranteed.",
       color: "from-orange-500 to-orange-600",
       size: "large"
     }
   ]
 
   const stats = [
-    { icon: <Users className="w-5 h-5" />, label: "Active Creators", value: "50,000+" },
+    { icon: <Users className="w-5 h-5" />, label: "Active Creators", value: "50K+" },
     { icon: <Coins className="w-5 h-5" />, label: "Coins Earned", value: "2.5M+" },
     { icon: <TrendingUp className="w-5 h-5" />, label: "Videos Promoted", value: "500K+" },
     { icon: <Award className="w-5 h-5" />, label: "Success Rate", value: "95%" }
@@ -160,10 +160,10 @@ export default function Features() {
         >
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              VidGro by the Numbers
+              Real Results from the Community
             </h3>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-              Real stats from our thriving creator community
+              95% success rate - users see growth in their first week
             </p>
           </div>
 
