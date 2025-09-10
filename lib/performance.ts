@@ -22,7 +22,7 @@ export const debounce = (func: Function, wait: number) => {
 // Throttle function for animations
 export const throttle = (func: Function, limit: number) => {
   let inThrottle: boolean;
-  return function(...args: any[]) {
+  return function(this: any, ...args: any[]) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
