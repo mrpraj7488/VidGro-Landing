@@ -15,18 +15,18 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'gsap'],
     gzipSize: false,
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
   },
+  swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
     styledComponents: true,
+    // Target modern browsers to reduce polyfills
+    targets: {
+      chrome: '91',
+      firefox: '90',
+      safari: '15',
+      edge: '91'
+    }
   },
   modularizeImports: {
     'lucide-react': {
