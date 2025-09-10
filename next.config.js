@@ -11,13 +11,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'gsap'],
-    serverComponentsExternalPackages: ['gsap'],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Disable legacy browser support to reduce polyfills
-  transpilePackages: [],
   // Optimize production builds
   productionBrowserSourceMaps: false,
   // Optimize bundle size
