@@ -157,19 +157,19 @@ export default function Testimonials() {
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-3 sm:gap-4 bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
                       <div className="text-center">
-                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-red-500 mb-1">
+                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-red-700 mb-1">
                           {testimonials[currentIndex].stats.before}
                         </div>
                         <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Before</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-green-500 mb-1">
+                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-green-700 mb-1">
                           {testimonials[currentIndex].stats.after}
                         </div>
                         <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">After</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-indigo-500 mb-1">
+                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-indigo-700 mb-1">
                           {testimonials[currentIndex].stats.timeframe}
                         </div>
                         <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Timeframe</div>

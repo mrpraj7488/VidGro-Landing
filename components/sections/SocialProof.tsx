@@ -75,7 +75,7 @@ export default function SocialProof() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.3 }}
             >
-              <div className="text-green-500">{badge.icon}</div>
+              <div className="text-green-700">{badge.icon}</div>
               <span className="font-medium">{badge.text}</span>
             </motion.div>
           ))}

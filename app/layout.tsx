@@ -81,15 +81,25 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <meta name="theme-color" content="#10b981" />
         <style dangerouslySetInnerHTML={{ __html: `
-          :root{--font-inter:'Inter',system-ui,-apple-system,sans-serif;--font-poppins:'Poppins',system-ui,-apple-system,sans-serif}
-          *{margin:0;padding:0;box-sizing:border-box}
-          html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-          body{font-family:var(--font-inter);min-height:100vh;background:#fff;color:#111827}
-          .dark body{background:#111827;color:#f9fafb}
+          *,::after,::before{box-sizing:border-box;border:0;padding:0;margin:0}
+          html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";scroll-behavior:smooth}
+          body{margin:0;line-height:inherit;min-height:100vh;background:#fff;color:#111827}
+          h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+          a{color:inherit;text-decoration:inherit}
+          button{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0;background:transparent;cursor:pointer}
           .min-h-screen{min-height:100vh}
           .container{width:100%;margin:0 auto;padding:0 1rem;max-width:1280px}
+          .flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}
+          .text-center{text-align:center}.font-bold{font-weight:700}.font-extrabold{font-weight:800}
+          .text-4xl{font-size:2.25rem}.text-5xl{font-size:3rem}.text-6xl{font-size:3.75rem}
+          .py-20{padding-top:5rem;padding-bottom:5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}
+          .bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}
+          .text-primary-500{color:#10b981}.bg-primary-500{background-color:#10b981}
           .animate-pulse{animation:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite}
           @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+          @media(min-width:640px){.sm\\:text-5xl{font-size:3rem}.sm\\:text-6xl{font-size:3.75rem}}
+          @media(min-width:768px){.md\\:text-6xl{font-size:3.75rem}.md\\:text-7xl{font-size:4.5rem}}
+          @media(min-width:1024px){.lg\\:text-7xl{font-size:4.5rem}.lg\\:text-8xl{font-size:6rem}}
         ` }} />
       </head>
       <body className={inter.className}>
