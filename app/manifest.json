@@ -10,9 +10,22 @@
   "orientation": "portrait-primary",
   "icons": [
     {
+<<<<<<< HEAD
       "src": "/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
+=======
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+>>>>>>> d97850c77196929ac053f8d23d9747204e8e55c2
     }
   ],
   "categories": ["social", "productivity", "entertainment"],
