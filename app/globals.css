@@ -1,4 +1,4 @@
-/* Critical CSS inlined in layout.tsx */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
