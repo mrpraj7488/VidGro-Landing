@@ -232,7 +232,7 @@ export default function Testimonials() {
           </div>
 
           {/* Testimonial indicators - adjust for mobile vs desktop */}
-          <div className="flex justify-center gap-2 mt-6 sm:mt-8">
+          <div className="flex justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
             {Array.from({ length: isMobile ? testimonials.length : Math.ceil(testimonials.length / 2) }).map((_, index) => (
               <button
                 key={index}
@@ -241,12 +241,18 @@ export default function Testimonials() {
                   setCurrentIndex(index * multiplier)
                 }}
                 aria-label={`Go to testimonial ${index + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`min-w-[44px] min-h-[44px] rounded-full transition-all duration-300 flex items-center justify-center ${
                   (isMobile ? currentIndex : Math.floor(currentIndex / 2)) === index
-                    ? 'bg-indigo-500 w-8'
-                    : 'bg-gray-300 dark:bg-gray-600 w-2'
+                    ? 'bg-indigo-500'
+                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                 }`}
-              />
+              >
+                <div className={`rounded-full transition-all duration-300 ${
+                  (isMobile ? currentIndex : Math.floor(currentIndex / 2)) === index
+                    ? 'bg-white w-4 h-2'
+                    : 'bg-current w-2 h-2'
+                }`} />
+              </button>
             ))}
           </div>
 
