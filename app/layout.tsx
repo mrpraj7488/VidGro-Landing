@@ -80,7 +80,17 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <meta name="theme-color" content="#10b981" />
-        <link rel="preload" as="style" href="/_next/static/css/app/layout.css" />
+        <style dangerouslySetInnerHTML={{ __html: `
+          :root{--font-inter:'Inter',system-ui,-apple-system,sans-serif;--font-poppins:'Poppins',system-ui,-apple-system,sans-serif}
+          *{margin:0;padding:0;box-sizing:border-box}
+          html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+          body{font-family:var(--font-inter);min-height:100vh;background:#fff;color:#111827}
+          .dark body{background:#111827;color:#f9fafb}
+          .min-h-screen{min-height:100vh}
+          .container{width:100%;margin:0 auto;padding:0 1rem;max-width:1280px}
+          .animate-pulse{animation:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite}
+          @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+        ` }} />
       </head>
       <body className={inter.className}>
         {children}

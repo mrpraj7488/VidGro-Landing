@@ -11,6 +11,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'gsap'],
+    serverComponentsExternalPackages: ['gsap'],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
