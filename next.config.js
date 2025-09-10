@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const webpack = require('webpack');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -39,6 +40,16 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   // Optimize bundle size
   webpack: (config, { isServer, dev }) => {
+    // Add IgnorePlugin to exclude polyfills
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^core-js/,
+      }),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^regenerator-runtime/,
+      })
+    );
+
     if (!dev && !isServer) {
       // Aggressive tree shaking and optimization
       config.optimization = {
