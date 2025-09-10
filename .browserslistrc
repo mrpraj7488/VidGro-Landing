@@ -1,7 +1,5 @@
-# Browsers that we support
-# This helps reduce bundle size by not including polyfills for old browsers
-
-defaults
-not IE 11
-not dead
-> 0.2%
+# Target modern browsers only to eliminate polyfills
+Chrome >= 91
+Firefox >= 90
+Safari >= 15
+Edge >= 91

@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -22,13 +24,75 @@ const nextConfig = {
       transform: 'lucide-react/dist/esm/icons/{{member}}',
     },
   },
+  // Target modern browsers only to remove polyfills
+  target: 'serverless',
+  env: {
+    NEXT_TELEMETRY_DISABLED: '1',
+  },
   // Optimize production builds
   productionBrowserSourceMaps: false,
   // Optimize bundle size
-  webpack: (config, { isServer }) => {
-    // Enable tree shaking for production builds
-    if (config.mode === 'production') {
-      config.optimization.sideEffects = false;
+  webpack: (config, { isServer, dev }) => {
+    if (!dev && !isServer) {
+      // Aggressive tree shaking and optimization
+      config.optimization = {
+        ...config.optimization,
+        sideEffects: false,
+        usedExports: true,
+        providedExports: true,
+        concatenateModules: true,
+        flagIncludedChunks: true,
+        occurrenceOrder: true,
+        sideEffects: false,
+        splitChunks: {
+          chunks: 'all',
+          minSize: 20000,
+          maxSize: 244000,
+          cacheGroups: {
+            framework: {
+              chunks: 'all',
+              name: 'framework',
+              test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-subscription)[\\/]/,
+              priority: 40,
+              enforce: true,
+            },
+            lib: {
+              test(module) {
+                return module.size() > 160000 && /node_modules[/\\]/.test(module.identifier());
+              },
+              name(module) {
+                const hash = crypto.createHash('sha1');
+                hash.update(module.libIdent ? module.libIdent({ context: config.context }) : module.identifier());
+                return hash.digest('hex').substring(0, 8);
+              },
+              priority: 30,
+              minChunks: 1,
+              reuseExistingChunk: true,
+            },
+            commons: {
+              name: 'commons',
+              minChunks: 2,
+              priority: 20,
+            },
+            shared: {
+              name: false,
+              priority: 10,
+              minChunks: 2,
+              reuseExistingChunk: true,
+            },
+          },
+        },
+      };
+
+      // Remove unused CSS
+      config.optimization.minimizer = config.optimization.minimizer || [];
+      
+      // Exclude polyfills and legacy code
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'core-js': false,
+        'regenerator-runtime': false,
+      };
     }
     
     return config;
