@@ -21,7 +21,7 @@ export default function Features() {
   const features = [
     {
       icon: <Coins className="w-6 h-6" />,
-      title: "1 Coin = 1 Real View",
+      title: "Spent Coin = Get Real View",
       description: "Simple, transparent system. Every coin you earn becomes a guaranteed real view on your video from engaged VidGro creators - no bots, no fake accounts.",
       color: "from-green-500 to-green-600",
       size: "large"
