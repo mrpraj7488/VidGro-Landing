@@ -42,6 +42,14 @@ const nextConfig = {
       })
     );
 
+    // Block all polyfills via externals
+    config.externals = {
+      ...config.externals,
+      'core-js': 'null',
+      'core-js-pure': 'null',
+      'regenerator-runtime': 'null',
+    };
+
     if (!dev && !isServer) {
       // Aggressive tree shaking and optimization
       config.optimization = {
@@ -53,23 +61,28 @@ const nextConfig = {
         flagIncludedChunks: true,
         splitChunks: {
           chunks: 'all',
+          maxAsyncRequests: 30,
+          maxInitialRequests: 30,
           minSize: 20000,
           maxSize: 244000,
           cacheGroups: {
+            default: false,
+            vendors: false,
             framework: {
-              chunks: 'all',
               name: 'framework',
-              test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-subscription)[\\/]/,
+              chunks: 'all',
+              test: /[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-subscription)[\\/]/,
               priority: 40,
               enforce: true,
             },
             lib: {
               test(module) {
-                return module.size() > 160000 && /node_modules[/\\]/.test(module.identifier());
+                return module.size() > 50000 &&
+                  /node_modules[/\\]/.test(module.identifier());
               },
               name(module) {
                 const hash = crypto.createHash('sha1');
-                hash.update(module.libIdent ? module.libIdent({ context: config.context }) : module.identifier());
+                hash.update(module.identifier());
                 return hash.digest('hex').substring(0, 8);
               },
               priority: 30,
@@ -80,9 +93,15 @@ const nextConfig = {
               name: 'commons',
               minChunks: 2,
               priority: 20,
+              maxSize: 244000,
             },
             shared: {
-              name: false,
+              name(module, chunks) {
+                return crypto
+                  .createHash('sha1')
+                  .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
+                  .digest('hex') + (isServer ? '-server' : '');
+              },
               priority: 10,
               minChunks: 2,
               reuseExistingChunk: true,
@@ -94,11 +113,13 @@ const nextConfig = {
       // Remove unused CSS
       config.optimization.minimizer = config.optimization.minimizer || [];
       
-      // Exclude polyfills and legacy code
+      // Exclude legacy polyfills completely
       config.resolve.alias = {
         ...config.resolve.alias,
         'core-js': false,
+        'core-js-pure': false,
         'regenerator-runtime': false,
+        '@swc/helpers': false,
       };
 
       // Further optimize for modern browsers
