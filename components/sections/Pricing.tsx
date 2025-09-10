@@ -80,7 +80,8 @@ export default function Pricing() {
                   {plan.originalPrice && (
                     <span className="text-lg text-gray-500 line-through ml-2">
                       {plan.originalPrice}
-                  </span>
+                    </span>
+                  )}
                   {plan.period !== "Forever" && (
                     <span className="text-gray-600 dark:text-gray-400 ml-2 text-sm sm:text-base">
                       {plan.period}
