@@ -108,6 +108,11 @@ export const urgencyElements = {
     ],
     displayInterval: 6000,
     cities: ["New York", "Los Angeles", "London", "Toronto", "Mumbai", "Sydney", "Berlin", "Tokyo", "São Paulo", "Mexico City"]
+  },
+  limitedSpots: {
+    text: "creators growing right now",
+    updateInterval: 8000,
+    range: { min: 23, max: 47 }
   }
 };
 
