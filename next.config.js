@@ -42,13 +42,18 @@ const nextConfig = {
       })
     );
 
-    // Block all polyfills via externals
-    config.externals = {
-      ...config.externals,
-      'core-js': 'null',
-      'core-js-pure': 'null',
-      'regenerator-runtime': 'null',
-    };
+    // Block all polyfills via externals (only for client-side)
+    if (!isServer) {
+      config.externals = [
+        ...(Array.isArray(config.externals) ? config.externals : [config.externals]).filter(Boolean),
+        function ({ request }, callback) {
+          if (/^core-js/.test(request) || /^regenerator-runtime/.test(request)) {
+            return callback(null, 'commonjs ' + request);
+          }
+          callback();
+        }
+      ];
+    }
 
     if (!dev && !isServer) {
       // Aggressive tree shaking and optimization
