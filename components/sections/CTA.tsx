@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Rocket, Users, TrendingUp, Sparkles, ArrowRight } from 'lucide-react'
 import GamifiedButton from '../ui/GamifiedButton'
@@ -48,15 +48,15 @@ export default function CTA() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 relative overflow-hidden">
-      {/* Background decorations */}
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-600 via-indigo-600 to-pink-600 relative overflow-hidden">
+      {/* Background decorations - responsive sizes */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -translate-x-48 -translate-y-48" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-48 translate-y-48" />
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-white/3 rounded-full -translate-x-32 -translate-y-32" />
+        <div className="absolute top-0 left-0 w-48 sm:w-64 lg:w-96 h-48 sm:h-64 lg:h-96 bg-white/5 rounded-full -translate-x-24 sm:-translate-x-32 lg:-translate-x-48 -translate-y-24 sm:-translate-y-32 lg:-translate-y-48" />
+        <div className="absolute bottom-0 right-0 w-48 sm:w-64 lg:w-96 h-48 sm:h-64 lg:h-96 bg-white/5 rounded-full translate-x-24 sm:translate-x-32 lg:translate-x-48 translate-y-24 sm:translate-y-32 lg:translate-y-48" />
+        <div className="absolute top-1/2 left-1/2 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-white/3 rounded-full -translate-x-16 sm:-translate-x-24 lg:-translate-x-32 -translate-y-16 sm:-translate-y-24 lg:-translate-y-32" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main headline */}
           <motion.div
@@ -65,25 +65,25 @@ export default function CTA() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                <Rocket className="w-10 h-10 text-white" />
+            <div className="flex justify-center mb-4 sm:mb-6">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center">
+                <Rocket className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 px-2">
               Stop Waiting. Start Growing.
             </h2>
             
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed px-2 max-w-3xl mx-auto">
               Every day you wait is growth you lose. Join 50,000+ creators who took control of their YouTube success. 
-              <span className="font-semibold"> Get 100 welcome coins instantly - completely free forever!</span>
+              <span className="font-semibold block sm:inline mt-2 sm:mt-0"> Get 100 welcome coins instantly - completely free forever!</span>
             </p>
           </motion.div>
 
-          {/* Benefits */}
+          {/* Benefits - responsive grid */}
           <motion.div
-            className="flex flex-wrap justify-center gap-6 mb-12"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -92,19 +92,19 @@ export default function CTA() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
+                className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-white"
               >
-                <div className="text-white/80">
-                  {benefit.icon}
+                <div className="text-white/80 flex-shrink-0">
+                  {React.cloneElement(benefit.icon, { className: "w-5 h-5 sm:w-6 sm:h-6" })}
                 </div>
-                <span className="font-medium">{benefit.text}</span>
+                <span className="font-medium text-xs sm:text-sm lg:text-base">{benefit.text}</span>
               </div>
             ))}
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - mobile optimized */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-2 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -114,29 +114,29 @@ export default function CTA() {
               variant="secondary"
               size="lg"
               coinReward={100}
-              className="min-w-[280px] bg-white text-primary-600 hover:bg-gray-50"
+              className="w-full sm:w-auto sm:min-w-[280px] min-h-[56px] sm:min-h-[60px] bg-white text-purple-600 hover:bg-gray-50 text-base sm:text-lg px-6 sm:px-8"
             >
               Get 100 FREE Coins Now
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </GamifiedButton>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators - responsive grid */}
           <motion.div
-            className="mt-8 text-center"
+            className="mt-6 sm:mt-8 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <div className="text-white/60 text-sm mb-4">
+            <div className="text-white/60 text-xs sm:text-sm mb-3 sm:mb-4">
               Join the creator revolution - completely free forever
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <div className="text-white text-sm">✓ 100 Welcome Coins</div>
-              <div className="text-white text-sm">✓ Always Free</div>
-              <div className="text-white text-sm">✓ No Credit Card Required</div>
-              <div className="text-white text-sm">✓ Real Human Views</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto">
+              <div className="text-white text-xs sm:text-sm opacity-80">✓ 100 Welcome Coins</div>
+              <div className="text-white text-xs sm:text-sm opacity-80">✓ Always Free</div>
+              <div className="text-white text-xs sm:text-sm opacity-80">✓ No Credit Card</div>
+              <div className="text-white text-xs sm:text-sm opacity-80">✓ Real Views</div>
             </div>
           </motion.div>
         </div>
