@@ -149,7 +149,7 @@ export default function SocialProof() {
               <button
                 key={index}
                 aria-label={`Go to testimonial ${index + 1}`}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-8 h-8 rounded-full transition-all duration-300 ${
                   index === currentTestimonial % 5 ? 'bg-primary-500 w-6' : 'bg-gray-300 dark:bg-gray-600'
                 }`}
                 onClick={() => setCurrentTestimonial(index)}

@@ -204,7 +204,7 @@ export default function Testimonials() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-8 h-8 rounded-full transition-all duration-300 ${
                   currentIndex === index
                     ? 'bg-indigo-500 w-6'
                     : 'bg-gray-300 dark:bg-gray-600'
