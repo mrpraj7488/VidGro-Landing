@@ -40,8 +40,6 @@ const nextConfig = {
         providedExports: true,
         concatenateModules: true,
         flagIncludedChunks: true,
-        occurrenceOrder: true,
-        sideEffects: false,
         splitChunks: {
           chunks: 'all',
           minSize: 20000,
