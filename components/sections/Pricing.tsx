@@ -47,7 +47,7 @@ export default function Pricing() {
   const faqs = [
     {
       q: "How does the coin system work?",
-      a: "Simple! Watch videos to earn coins (1 coin per 30-second watch), then spend coins to promote your videos (1 coin = 1 real view). You start with 200 FREE coins!"
+      a: "Simple! Watch videos to earn coins, spend coins to promote your videos. You start with 100 FREE coins!"
     },
     {
       q: "What are the VIP benefits?",
