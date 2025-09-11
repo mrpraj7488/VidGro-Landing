@@ -10,8 +10,8 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ['/api/', '/admin/', '/_next/'],
     },
     sitemap: [
-      `${baseUrl}sitemap.xml`,
-      `${baseUrl}sitemap-index.xml`
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/sitemap-index.xml`
     ],
   }
 }
