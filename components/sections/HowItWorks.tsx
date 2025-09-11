@@ -8,10 +8,10 @@ export default function HowItWorks() {
     {
       icon: <Play className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Watch & Earn Coins",
-      description: "Watch videos from fellow creators for at least 30 seconds and earn 1 coin per video. No daily limits - earn unlimited coins!",
+      description: "Watch videos from fellow creators for at least 30 seconds and earn coin per video. No daily limits - earn unlimited coins!",
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50 dark:bg-blue-900/20",
-      stat: "1 coin/video"
+      stat: "coin/video"
     },
     {
       icon: <Coins className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
@@ -24,7 +24,7 @@ export default function HowItWorks() {
     {
       icon: <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Get Real Views",
-      description: "Spend coins to promote your videos. 1 coin = 1 guaranteed real view from engaged creators. See results within 24 hours!",
+      description: "Spend coins to promote your videos. Guaranteed real view from engaged creators. See results within 24 hours!",
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50 dark:bg-green-900/20",
       stat: "24hr delivery"
