@@ -142,7 +142,7 @@ export default function Hero() {
               <a href="#how-it-works" className="text-purple-600 dark:text-purple-400 hover:underline">Watch videos</a>, earn coins, <a href="#features" className="text-purple-600 dark:text-purple-400 hover:underline">promote your content</a>.{' '}
             </span>
             <span className="text-purple-600 dark:text-purple-400 font-semibold block sm:inline mt-2 sm:mt-0">
-              Get 100 welcome coins instantly!
+              Get 100 welcome bonus instantly!
             </span>
           </motion.p>
 
